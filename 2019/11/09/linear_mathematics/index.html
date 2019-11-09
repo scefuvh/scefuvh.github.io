@@ -8,14 +8,19 @@
   <title>Linear Mathematics Notes | David&#39;s Sweet Hut</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="排列相关定义">
+<meta name="keywords" content="notes">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Linear Mathematics Notes">
-<meta property="og:url" content="https:&#x2F;&#x2F;scefuvh.github.io&#x2F;2019&#x2F;11&#x2F;05&#x2F;linear_mathematics&#x2F;index.html">
+<meta property="og:url" content="https:&#x2F;&#x2F;scefuvh.github.io&#x2F;2019&#x2F;11&#x2F;09&#x2F;linear_mathematics&#x2F;index.html">
 <meta property="og:site_name" content="David&#39;s Sweet Hut">
 <meta property="og:description" content="排列相关定义">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-11-05T15:35:04.626Z">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;scefuvh&#x2F;linear_mathematics&#x2F;blob&#x2F;master&#x2F;Pics&#x2F;vandermonde_determinant.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;scefuvh&#x2F;linear_mathematics&#x2F;blob&#x2F;master&#x2F;arrow_determinant.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;scefuvh&#x2F;linear_mathematics&#x2F;blob&#x2F;master&#x2F;x_determinant.jpg">
+<meta property="og:updated_time" content="2019-11-09T08:46:30.273Z">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;github.com&#x2F;scefuvh&#x2F;linear_mathematics&#x2F;blob&#x2F;master&#x2F;Pics&#x2F;vandermonde_determinant.jpg">
   
     <link rel="alternate" href="/atom.xml" title="David&#39;s Sweet Hut" type="application/atom+xml">
   
@@ -40,7 +45,7 @@
       </h1>
       
         <h2 id="subtitle-wrap">
-          <a href="/" id="subtitle">write about everything</a>
+          <a href="/" id="subtitle">Write About Everything</a>
         </h2>
       
     </div>
@@ -68,8 +73,8 @@
       <div class="outer">
         <section id="main"><article id="post-linear_mathematics" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2019/11/05/linear_mathematics/" class="article-date">
-  <time datetime="2019-11-04T16:00:00.000Z" itemprop="datePublished">2019-11-05</time>
+    <a href="/2019/11/09/linear_mathematics/" class="article-date">
+  <time datetime="2019-11-08T16:00:00.000Z" itemprop="datePublished">2019-11-09</time>
 </a>
     
   </div>
@@ -89,13 +94,13 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h1 id="排列"><a href="#排列" class="headerlink" title="排列"></a>排列</h1><h2 id="相关定义"><a href="#相关定义" class="headerlink" title="相关定义"></a>相关定义</h2><a id="more"></a>
-<p>排列<br>:    n阶排列是n个有绪的数组成的的排列<br>一共有n!个n阶排列.<br>数对<br>:    排列中任意两个数组成的二元组.<br>顺序<br>:    数对(i, k)(i &lt; k).&gt;<br>逆序<br>:    数对(i, k)(i &gt; k).<br>逆序数<br>:    排列中逆序的个数.记为τ(12345…)<br>奇偶排列<br>:    逆序对为偶数的是偶排列, 为奇数的是奇排列.<br>自然排列<br>:   按12345的顺序的排列.<br>对换<br>:    交换排列中的任意两个数.  </p>
+<p>排列<br>:    n阶排列是n个有序的数组成的的排列<br>一共有n!个n阶排列.<br>数对<br>:    排列中任意两个数组成的二元组.<br>顺序<br>:    数对(i, k)(i &lt; k).<br>逆序<br>:    数对(i, k)(i &gt; k).<br>逆序数<br>:    排列中逆序的个数.记为τ(12345…)<br>奇偶排列<br>:    逆序对为偶数的是偶排列, 为奇数的是奇排列.<br>自然排列<br>:   按12345的顺序的排列.<br>对换<br>:    交换排列中的任意两个数.  </p>
 <h2 id="相关定理"><a href="#相关定理" class="headerlink" title="相关定理"></a>相关定理</h2><p><strong>排列对换改变奇偶性.</strong><br><strong>n阶排列中奇偶排列各占一半.</strong>  </p>
-<h1 id="行列式"><a href="#行列式" class="headerlink" title="行列式"></a>行列式</h1><h2 id="相关定义-1"><a href="#相关定义-1" class="headerlink" title="相关定义"></a>相关定义</h2><p>主对角线<br>:    “\”方向的对角线.<br>次对角线<br>:    “/“方向的对角线.<br>转置行列式<br>:    设 $ D=|a_{ij}| $ , 则 $ D^T = |a_{ji}| $ 即为转置行列式.<br>余子式($M^{(n-k)}$)<br>:    在n阶行列式D=|$a_{ij}$|中, 去掉第$i_1, i_2, …… i_n$行和第$j_1, j_2, … j_n$列交叉店所有的元素$a_{ij}$, 剩下的元素按原来的相对位置构成的行列式叫做D中k阶子式$N^{(k)}$的余子式.<br>代数余子式($A^{(n-k)}$)<br>:    $A_{ij} = M_{ij}(-1)^{i+j}$<br>子式($N^{(k)}$)<br>:    在n阶行列式中选取k行k列, 将交叉点处的元素按原来的相对位置组成一个新的行列式, 成为D的一个k阶子式.<br>拉普拉斯定理<br>:    在n阶行列式D中给定的k行的所有的子式乘上对应的代数余子式的和等于D的值.</p>
-<h2 id="计算方法"><a href="#计算方法" class="headerlink" title="计算方法"></a>计算方法</h2><p>二阶: 主对角元乘积 - 次对角元乘积.<br>三阶: 穿真法.<br>n阶: 从1-n行, 每行选取一个与之前所选元素不重复的列的元素相乘, 将所有可能相加.<br>定义公式: $ D=|a{ij}|_n=(-1)^τ(i_1i_2…i_n) + \sum_{k_1k_2k_3…k_n}(-1)^τ(k_1k_2…k_n)a_{i_1k_1} a_{i_2k_2} a_{i_3k_3} … a_{i_nk_n} $ <strong>(i_1i_2i_3…i_n)为一个给定的排列.</strong><br>实际操作: 利用含有1的列不断将同列其他元素变为0后再展开依次降阶.  </p>
+<h1 id="行列式"><a href="#行列式" class="headerlink" title="行列式"></a>行列式</h1><h2 id="相关定义-1"><a href="#相关定义-1" class="headerlink" title="相关定义"></a>相关定义</h2><p>主对角线<br>:    “\”方向的对角线.<br>次对角线<br>:    “/“方向的对角线.<br>转置行列式<br>:    设 $ D=|a_{ij}| $ , 则 $ D^T = |a_{ji}| $ 即为转置行列式.<br>余子式($M^{(n-k)}$)<br>:    在n阶行列式D=|$a_{ij}$|中, 去掉第$i_1, i_2, …… i_n$行和第$j_1, j_2, … j_n$列交叉店所有的元素$a_{ij}$, 剩下的元素按原来的相对位置构成的行列式叫做D中k阶子式$N^{(k)}$的余子式.<br>代数余子式($A^{(n-k)}$)<br>:    $A^{(n-k)} = M^{(n-k)}(-1)^{i_1+i_2+…+i_n+j_i+j_2+…+j_n}$<br>子式($N^{(k)}$)<br>:    在n阶行列式中选取k行k列, 将交叉点处的元素按原来的相对位置组成一个新的行列式, 成为D的一个k阶子式.<br>拉普拉斯定理<br>:    在n阶行列式D中给定的k行的所有的子式乘上对应的代数余子式的和等于D的值.</p>
+<h2 id="计算方法"><a href="#计算方法" class="headerlink" title="计算方法"></a>计算方法</h2><p>二阶: 主对角元乘积 - 次对角元乘积.<br>三阶: 穿针法.<br>n阶: 从1-n行, 每行选取一个与之前所选元素不重复的列的元素相乘, 将所有可能相加.<br>定义公式: $ D=|a_{ij}|_n=(-1)^τ(i_1i_2…i_n) + \sum_{k_1k_2k_3…k_n}(-1)^τ(k_1k_2…k_n)a_{i_1k_1} a_{i_2k_2} a_{i_3k_3} … a_{i_nk_n} $ <strong>$(i_1i_2i_3…i_n)$为一个给定的排列.</strong><br>实际操作: 利用含有1的列不断将同列其他元素变为0后再展开依次降阶.  </p>
 <h2 id="相关性质"><a href="#相关性质" class="headerlink" title="相关性质"></a>相关性质</h2><ul>
-<li>行列式具有对称性.**  </li>
-<li><script type="math/tex; mode=display">D^T = D</script></li>
+<li>行列式具有对称性.  </li>
+<li>$ D^T = D $</li>
 <li>交换行列式中任意两行, 行列式的值变为相反数.  </li>
 <li>行列式中两行成比例, 则行列式值为0.  </li>
 <li>行列式中一行元素乘k, 行列式值乘k.  </li>
@@ -103,13 +108,15 @@
 <li>若行列式中一行的每个元素都是两个元素$a_{ij}, b_{ij}$的和, 则行列式值等于分别用$a_{ij}和b_{ij}$替换该行元素的两个新行列式的值的和.  </li>
 <li>行列式中一行元素乘上k后加到另一行对应列元素上, 行列式值不变.  </li>
 </ul>
-<h2 id="乘积公式"><a href="#乘积公式" class="headerlink" title="乘积公式"></a>乘积公式</h2><p>设两个n阶行列式$D_1 = |a_{ij}|, D_2 = |b_{ij}|, 则D_1 * D_2 = |c_{ij}|, 则|c_{ij}| = \sum_{k=1}^na_{ik}b_{kj}$  </p>
-<h2 id="特殊的行列式"><a href="#特殊的行列式" class="headerlink" title="特殊的行列式"></a>特殊的行列式</h2><h1 id="矩阵"><a href="#矩阵" class="headerlink" title="矩阵"></a>矩阵</h1><h2 id="相关定义-2"><a href="#相关定义-2" class="headerlink" title="相关定义"></a>相关定义</h2><p>行矩阵(行向量)<br>:    仅有一行的矩阵.<br>列矩阵(列向量)<br>:    仅有一列的矩阵.<br>零矩阵(O)<br>:    所有元素都为0的矩阵.<br>方阵($(A_{ij})_n$)<br>:    行数等于列数的矩阵.<br>对角矩阵<br>:    除了主对角线上其他元素都为0的矩阵.<br>单位矩阵(E)<br>:    主对角元全为1的的对角矩阵.<br>数量矩阵<br>:    主对角元相等的对角矩阵.<br>三角矩阵<br>:    主对角线一边元素全为0, 另一边全不为0的矩阵.<br>对称矩阵<br>:    关于主对角线对称位置元素相等的矩阵.<br>反对称矩阵<br>:    关于主对角线对称位置元素为相反数的矩阵.<br>同类型矩阵<br>:    行数相等, 列数也相等的多个矩阵.<br>初等矩阵(R)<br>:    单位矩阵经过一次初等变换所得到的矩阵.  </p>
+<h2 id="乘积公式"><a href="#乘积公式" class="headerlink" title="乘积公式"></a>乘积公式</h2><p>设两个n阶行列式$D_1 = |a_{ij}|, D_2 = |b_{ij}|, 则$  </p>
+<script type="math/tex; mode=display">D_1 * D_2 = |c_{ij}|, 则|c_{ij}| = \sum_{k=1}^na_{ik}b_{kj}</script><h2 id="特殊的行列式"><a href="#特殊的行列式" class="headerlink" title="特殊的行列式"></a>特殊的行列式</h2><p><img src="https://github.com/scefuvh/linear_mathematics/blob/master/Pics/vandermonde_determinant.jpg" alt="范德蒙德行列式" title="范德蒙德行列式"><br><img src="https://github.com/scefuvh/linear_mathematics/blob/master/arrow_determinant.jpg" alt="箭形行列式" title="箭形行列式"><br><img src="https://github.com/scefuvh/linear_mathematics/blob/master/x_determinant.jpg" alt="X形行列式" title="X形行列式"></p>
+<h1 id="矩阵"><a href="#矩阵" class="headerlink" title="矩阵"></a>矩阵</h1><h2 id="相关定义-2"><a href="#相关定义-2" class="headerlink" title="相关定义"></a>相关定义</h2><p>行矩阵(行向量)<br>:    仅有一行的矩阵.<br>列矩阵(列向量)<br>:    仅有一列的矩阵.<br>零矩阵(O)<br>:    所有元素都为0的矩阵.<br>方阵($(a_{ij})_n$)<br>:    行数等于列数的矩阵.<br>对角矩阵<br>:    除了主对角线上其他元素都为0的矩阵.<br>单位矩阵(E)<br>:    主对角元全为1的的对角矩阵.<br>数量矩阵<br>:    主对角元相等的对角矩阵.<br>三角矩阵<br>:    主对角线一边元素全为0, 另一边全不为0的矩阵.<br>对称矩阵<br>:    关于主对角线对称位置元素相等的矩阵.<br>反对称矩阵<br>:    关于主对角线对称位置元素为相反数的矩阵.<br>同类型矩阵<br>:    行数相等, 列数也相等的多个矩阵.<br>初等矩阵(R)<br>:    单位矩阵经过一次初等变换所得到的矩阵.  </p>
 <h2 id="运算法则"><a href="#运算法则" class="headerlink" title="运算法则"></a>运算法则</h2><h3 id="数乘"><a href="#数乘" class="headerlink" title="数乘"></a>数乘</h3><p>kA即为A中每个元素乘上k.  </p>
-<h3 id="互乘"><a href="#互乘" class="headerlink" title="互乘"></a>互乘</h3><script type="math/tex; mode=display">设A=(a_{ij})_{m \times p}, B=(b_{ij})_{p\times n}, 则A \times B = (c_{ij})_{m\times n}, 其中c_{ij} = \sum_{k=1}^pa_{ik}b_{kj}</script><p>互乘运算律:<br>设A = $(a_{ij})_{m\times n}$  </p>
+<h3 id="互乘"><a href="#互乘" class="headerlink" title="互乘"></a>互乘</h3><p>$设A=(a_{ij})_{m \times p}, B=(b_{ij})_{p\times n}, 则$  </p>
+<script type="math/tex; mode=display">A \times B = (c_{ij})_{m\times n}, 其中c_{ij} = \sum_{k=1}^pa_{ik}b_{kj}</script><p>互乘运算律:<br>设A = $(a_{ij})_{m\times n}$  </p>
 <ol>
-<li>矩阵乘法不满足交换率.  </li>
-<li>矩阵乘法不满足消去律.  </li>
+<li>互乘不满足交换率.  </li>
+<li>互乘不满足消去律.  </li>
 <li>两个非零矩阵的互乘可能是零矩阵.  </li>
 <li>$E_mA = A, AE_n = A$  </li>
 <li>互乘有分配律.  </li>
@@ -118,11 +125,11 @@
 <li>等式两边乘一个矩阵时, 只能同时在左边或右边乘.  </li>
 </ol>
 <h3 id="转置"><a href="#转置" class="headerlink" title="转置"></a>转置</h3><script type="math/tex; mode=display">(B + C)^T = B^T + C^T</script><script type="math/tex; mode=display">(kA^T) = kA^T</script><script type="math/tex; mode=display">(A_1A_2...A_n)^T = A_n^T...A_2^TA_1^T</script><script type="math/tex; mode=display">(A^m)^T = (A^m)^T</script><h3 id="共扼"><a href="#共扼" class="headerlink" title="共扼"></a>共扼</h3><p>A的共扼矩阵为$\overline{A} = (\overline{a_{ij})}$  </p>
-<script type="math/tex; mode=display">\overline{(A + B)} = \overline{A} + \overline{B}</script><script type="math/tex; mode=display">\overline{kA} = \overline{k}\overline{A}</script><script type="math/tex; mode=display">\overline{AB} = \overline{A}\cdot\overline{B}</script><h2 id="逆矩阵"><a href="#逆矩阵" class="headerlink" title="逆矩阵"></a>逆矩阵</h2><h3 id="相关定义-3"><a href="#相关定义-3" class="headerlink" title="相关定义"></a>相关定义</h3><p>逆矩阵<br>:    对于n阶矩阵A, 如果存在n阶矩阵B, 使AB=BA=E, 则A,B互为逆矩阵, 记为 $ A^{-1} $ .<br>奇异矩阵(不可逆矩阵)<br>:    若|A|=0, 则|A|是奇异矩阵(不可逆矩阵).<br>非奇异矩阵<br>:    若|A| != 0, 则|A|是非奇异矩阵(可逆矩阵).<br>伴随矩阵($A^<em>$)<br>:    对n阶方阵B, |B|的各个余子式按$A_{ij} = a_{ji}$的格式构成的行列式为A的伴随矩阵B</em>.  </p>
+<script type="math/tex; mode=display">\overline{(A + B)} = \overline{A} + \overline{B}</script><script type="math/tex; mode=display">\overline{kA} = \overline{k}\cdot\overline{A}</script><script type="math/tex; mode=display">\overline{AB} = \overline{A}\cdot\overline{B}</script><h2 id="逆矩阵"><a href="#逆矩阵" class="headerlink" title="逆矩阵"></a>逆矩阵</h2><h3 id="相关定义-3"><a href="#相关定义-3" class="headerlink" title="相关定义"></a>相关定义</h3><p>逆矩阵<br>:    对于n阶矩阵A, 如果存在n阶矩阵B, 使AB=BA=E, 则A,B互为逆矩阵, 记为$A^{-1}$.<br>奇异矩阵(不可逆矩阵/满秩矩阵)<br>:    若|A|=0, 则|A|是奇异矩阵.<br>非奇异矩阵<br>:    若|A| != 0, 则|A|是非奇异矩阵.<br>伴随矩阵($A^{<em>}$)<br>:    对n阶方阵B, |B|的各个余子式按$A_{ij} = a_{ji}$的格式构成的行列式为A的伴随矩阵$B^{</em>}$.  </p>
 <h3 id="定理"><a href="#定理" class="headerlink" title="定理"></a>定理</h3><ul>
 <li>A的逆矩阵最多一个.</li>
-<li>设A为n阶方阵, A可逆的充要条件是|A| != 0, $ A^{-1}=A*/|A| $  </li>
-<li>对于n阶方阵 $ A_1A_2…A_k = nE, 且n != 0 $ , 则A壹到Ak都可逆.  </li>
+<li>设A为n阶方阵, A可逆的充要条件是|A| != 0, $A^{-1}=A^{*}/|A|$  </li>
+<li>对于n阶方阵$A_1A_2…A_k = nE, 且n != 0$, 则$A_1$到$A_k$都可逆.  </li>
 </ul>
 <h3 id="运算性质"><a href="#运算性质" class="headerlink" title="运算性质"></a>运算性质</h3><ul>
 <li><script type="math/tex; mode=display">(A^{-1})^{-1}=A</script></li>
@@ -148,7 +155,7 @@
 <ul>
 <li>交换矩阵两行(列).  </li>
 <li>矩阵某一行(列)乘上一个不为零的数.  </li>
-<li>矩阵某一行(列)加上另一行(列)的某个倍数.<br>阶梯形矩阵<br>:    在行号递增下, 非零行的第一个非零元素所在的列号递增的矩阵.<br>规范(简化的)的阶梯形矩阵<br>:    非零行第一个元素为1, 且该元素所在的列的其他元素为0的阶梯形矩阵.<br>标准形矩阵<br>:    左上角为单位矩阵, 其它元素为0的矩阵.<br>矩阵的轶(r(A))<br>:    存在不为零的最高阶子式.<br>k阶子式<br>:    矩阵A中任取k行k列的k^2个元素组成的行列式.  </li>
+<li>矩阵某一行(列)加上另一行(列)的某个倍数.<br>阶梯形矩阵<br>:    在行号递增下, 非零行的第一个非零元素所在的列号递增的矩阵.<br>规范(简化的)的阶梯形矩阵<br>:    非零行第一个元素为1, 且该元素所在的列的其他元素为0的阶梯形矩阵.<br>标准形矩阵<br>:    左上角为单位矩阵, 其它元素为0的矩阵.<br>矩阵的轶(r(A))<br>:    存在不为零的最高阶子式.<br>k阶子式<br>:    矩阵A中任取k行k列的k^2个元素组成的行列式.<br>线性方程的矩阵表示<br>:    Ax = B, A由线性方程左侧含有x项的系数组成, B由等号右边的常数项组成.  </li>
 </ul>
 <h3 id="相关定理-1"><a href="#相关定理-1" class="headerlink" title="相关定理"></a>相关定理</h3><ul>
 <li>任何矩阵经过初等 <strong>行</strong>变换就可以变为简化的阶梯形矩阵.<br><em>方法: 逐列检查法</em><br><em>找到列号最小的非零列的第一个非零元素, 使它到第一行, 然后通过3号变换使其之下的元素变为0</em><br><em>对第一个非零行的第一个非零元素右下角的子矩阵重复上一步和这一步</em>  </li>
@@ -166,35 +173,44 @@
 </ul>
 <h3 id="初等变换求矩阵的逆矩阵"><a href="#初等变换求矩阵的逆矩阵" class="headerlink" title="初等变换求矩阵的逆矩阵"></a>初等变换求矩阵的逆矩阵</h3><p>因为任何可逆矩阵都可经过初等 <strong>行</strong>变换为单位矩阵, 所以A = PE, P是一系列初等矩阵的乘积, 所以$A^{-1} = P^{-1}$, 若$P = P_1P_2P_3…P_n, 则A^{-1} = P_n^{-1}…P_3^{-1}P_2^{-1}P_1^{-1}E$, 结合A = PE得到的$P^{-1}A = E$. 利用分块矩阵, $P^{-1}(A E) = (E A^{-1})$.<br>那么, 只要构造n$\times$2n阶矩阵(A E)并对其做初等行变换至A变为E, 则E就变为$A^{-1}$; 若无法达成, 则A不可逆.<br>类似, AX = B的方程可以将(A B)初等行变换成(E $A^{-1}B$)来解决.<br>XA = B的方程可以通过转置变成AX = B形式.  </p>
 <h2 id="分块矩阵及其初等变换"><a href="#分块矩阵及其初等变换" class="headerlink" title="分块矩阵及其初等变换"></a>分块矩阵及其初等变换</h2><hr>
-<h1 id="Cramer-Theorem"><a href="#Cramer-Theorem" class="headerlink" title="Cramer Theorem"></a>Cramer Theorem</h1><h2 id="相关定义-5"><a href="#相关定义-5" class="headerlink" title="相关定义"></a>相关定义</h2><p>齐次线性方程组<br>:    等式右边的常数为0的方程组.  </p>
+<h1 id="高斯消元法"><a href="#高斯消元法" class="headerlink" title="高斯消元法"></a>高斯消元法</h1><h2 id="相关定义-5"><a href="#相关定义-5" class="headerlink" title="相关定义"></a>相关定义</h2><p>同解方程组<br>:    <strong>解集</strong>相同的多个方程组.<br>自由未知量<br>:    用以表示其它未知量, 而自己没有确定取值且未被其他未知量表示的未知量.  </p>
+<p>设未知数个数为n.<br>考虑线性方程组AX = B(A, B是矩阵),则称C = (A, B)为这个方程组的增广矩阵.<br>如果B中所有元素为0, 为齐次线性方程组.<br>若将每个x的代入方程组中成立的取值按顺序组成一个列向量, 则称其为那个方程组的解向量.<br>方程组的高斯消元法本质上等价于对其增广矩阵进行初等行变换到规范的阶梯形矩阵.<br>化解增广矩阵时, 如果最下面一个常数元素无法化成0, 则原方程无解.<br>如果那个常数元素为0, 但是矩阵的秩小于未知数个数, 则方程有无数多解. 若相等, 方程有唯一解.  </p>
+<h2 id="相关定理-2"><a href="#相关定理-2" class="headerlink" title="相关定理"></a>相关定理</h2><p>高斯定理<br>:    设线性方程组Ax = B, 当r(A) = r($\breve{a}$) = n时, 方程组有唯一解, 若r(A) = r($\breve{A}$) &lt; r&gt;, 方程组有无穷多解, 若r(A) != r($\breve{A}$), 方程组无解.<br>同解定理<br>:    经过初等变换的方程组的解与原方程组的解相同.由此可得出齐次线性方程组总有解, 且若方程个数小于未知量个数则必有非零解.  </p>
+<hr>
+<h1 id="多维向量与线性方程组"><a href="#多维向量与线性方程组" class="headerlink" title="多维向量与线性方程组"></a>多维向量与线性方程组</h1><h2 id="相关定义-6"><a href="#相关定义-6" class="headerlink" title="相关定义"></a>相关定义</h2><p>n维向量<br>:    n个数组成的有序数组, 数$a_i$称为向量的第i个分量, 向量可以看作一个矩阵, 默认为列矩阵.<br>实向量<br>:    分量是实数的相量.<br>复向量<br>:    分量是复数的向量.<br>n维向量空间<br>:    n维实向量全体.<br>线性方程的向量表示<br>:    $xa_1 + xa_2 + … + xa_n = b$, 其中$a_1, a_2, … ,a_n为x_1, x_2, … ,x_n$的在每个方程中的系数按从上到下组成的列向量, b为等号右边的常数相量.  </p>
+<h2 id="运算律"><a href="#运算律" class="headerlink" title="运算律"></a>运算律</h2><p>等同于矩阵运算律.<br>只有所有分量相等的两个向量才相等.  </p>
+<hr>
+<h1 id="Cramer-Theorem"><a href="#Cramer-Theorem" class="headerlink" title="Cramer Theorem"></a>Cramer Theorem</h1><h2 id="相关定义-7"><a href="#相关定义-7" class="headerlink" title="相关定义"></a>相关定义</h2><p>齐次线性方程组<br>:    等式右边的常数为0的方程组.  </p>
 <h2 id="行列式版本"><a href="#行列式版本" class="headerlink" title="行列式版本"></a>行列式版本</h2><p>n元线性方程组系数行列式D不为0是此方程组有唯一解的 <strong>充分不必要条件</strong>.  </p>
 <script type="math/tex; mode=display">x_j = {D_j}\over{D}</script><p>其中$D_j$为将D中j列换成方程组右边常数的行列式.<br>若齐次线性方程组的D不为0, 则其只有一x全为0的解. 反之, 可能有非零解.  </p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://scefuvh.github.io/2019/11/05/linear_mathematics/" data-id="ck2ndxksw00024uepf3n64775" class="article-share-link">Share</a>
+      <a data-url="https://scefuvh.github.io/2019/11/09/linear_mathematics/" data-id="ck2rc2ghh0005coep0q3p41i7" class="article-share-link">Share</a>
       
       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/notes/" rel="tag">notes</a></li></ul>
+
     </footer>
   </div>
   
     
 <nav id="article-nav">
   
-    <a href="/2019/11/06/math/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/11/09/math/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          Advanced Mathematics Notes
+          Mathematics Notes
         
       </div>
     </a>
   
   
-    <a href="/2019/11/05/physics/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2019/10/27/hello/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Physics Notes</div>
+      <div class="article-nav-title">Hello World</div>
     </a>
   
 </nav>
@@ -213,7 +229,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/first-post/" rel="tag">first post</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/first-post/" rel="tag">first post</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/notes/" rel="tag">notes</a></li></ul>
     </div>
   </div>
 
@@ -223,7 +239,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/first-post/" style="font-size: 10px;">first post</a>
+      <a href="/tags/first-post/" style="font-size: 10px;">first post</a> <a href="/tags/notes/" style="font-size: 20px;">notes</a>
     </div>
   </div>
 
@@ -245,15 +261,15 @@
       <ul>
         
           <li>
-            <a href="/2019/11/06/math/">Advanced Mathematics Notes</a>
+            <a href="/2019/11/09/physics/">Physics Notes</a>
           </li>
         
           <li>
-            <a href="/2019/11/05/linear_mathematics/">Linear Mathematics Notes</a>
+            <a href="/2019/11/09/math/">Mathematics Notes</a>
           </li>
         
           <li>
-            <a href="/2019/11/05/physics/">Physics Notes</a>
+            <a href="/2019/11/09/linear_mathematics/">Linear Mathematics Notes</a>
           </li>
         
           <li>
