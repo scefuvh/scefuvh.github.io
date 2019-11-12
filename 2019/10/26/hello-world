@@ -8,7 +8,6 @@
   <title>Hello World | David&#39;s Sweet Hut</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
-<meta name="keywords" content="notes, argumentations, reviews">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hello World">
 <meta property="og:url" content="https:&#x2F;&#x2F;scefuvh.github.io&#x2F;2019&#x2F;10&#x2F;26&#x2F;hello-world">
@@ -102,7 +101,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://scefuvh.github.io/2019/10/26/hello-world" data-id="ck2vz9gz30000w0ep0cul5hty" class="article-share-link">Share</a>
+      <a data-url="https://scefuvh.github.io/2019/10/26/hello-world" data-id="ck2vzhmbv000128ep4qwl06eu" class="article-share-link">Share</a>
       
       
     </footer>
@@ -227,22 +226,5 @@
 
 
   </div>
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-<!--script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
 </body>
 </html>

@@ -200,7 +200,7 @@ A & B \ C & D
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://scefuvh.github.io/2019/11/12/linear-mathematics" data-id="ck2vz9gzk0004w0ep0qpihtqr" class="article-share-link">Share</a>
+      <a data-url="https://scefuvh.github.io/2019/11/12/linear-mathematics" data-id="ck2vzhmc0000328epe1xha9e3" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/notes/" rel="tag">notes</a></li></ul>
@@ -323,22 +323,5 @@ A & B \ C & D
 
 
   </div>
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-<!--script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
 </body>
 </html>
