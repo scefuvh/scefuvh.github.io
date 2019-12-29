@@ -8,10 +8,10 @@
   <title>Advanced Mathematics | David&#39;s Sweet Hut</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="基础相关定义">
-<meta name="keywords" content="Notes">
+<meta name="keywords" content="notes">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Advanced Mathematics">
-<meta property="og:url" content="https:&#x2F;&#x2F;scefuvh.github.io&#x2F;2019&#x2F;12&#x2F;24&#x2F;math&#x2F;index.html">
+<meta property="og:url" content="https:&#x2F;&#x2F;scefuvh.github.io&#x2F;2019&#x2F;12&#x2F;29&#x2F;math&#x2F;index.html">
 <meta property="og:site_name" content="David&#39;s Sweet Hut">
 <meta property="og:description" content="基础相关定义">
 <meta property="og:locale" content="en">
@@ -23,7 +23,7 @@
 <meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;scefuvh&#x2F;advanced-mathematics&#x2F;blob&#x2F;master&#x2F;rolle_theorem.jpg">
 <meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;scefuvh&#x2F;advanced-mathematics&#x2F;blob&#x2F;master&#x2F;lagrange_mean_value_theorem.jpg">
 <meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;scefuvh&#x2F;advanced-mathematics&#x2F;blob&#x2F;master&#x2F;cauchy_mean_value_theorem.jpg">
-<meta property="og:updated_time" content="2019-12-25T14:54:01.204Z">
+<meta property="og:updated_time" content="2019-12-29T12:13:11.828Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https:&#x2F;&#x2F;github.com&#x2F;scefuvh&#x2F;&#x2F;blob&#x2F;master&#x2F;">
   
@@ -78,8 +78,8 @@
       <div class="outer">
         <section id="main"><article id="post-math" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2019/12/24/math/" class="article-date">
-  <time datetime="2019-12-23T16:00:00.000Z" itemprop="datePublished">2019-12-24</time>
+    <a href="/2019/12/29/math/" class="article-date">
+  <time datetime="2019-12-28T16:00:00.000Z" itemprop="datePublished">2019-12-29</time>
 </a>
     
   </div>
@@ -179,7 +179,7 @@
 <blockquote>
 <p>将拉格朗日证明中的x, b, a换成g(x), g(b), g(a)<br><img src="https://github.com/scefuvh/advanced-mathematics/blob/master/cauchy_mean_value_theorem.jpg" alt="证明" title="柯西中值定理">  </p>
 </blockquote>
-<p>泰勒中值定理<br>:     若f(x)在x-=$x_0$处n+1阶可导, 则有$f(x) = f(x_0) + f^{‘}(x_0)(x - x_0) + {f^{(2)}(x_0)(x - x_0)^2}\over{2!} + … + {f^{(n)}(x_0)(x - x_0)^n}\over{n!} + {f^{(n+1)}(a)(x - x_0)^{n+1} }\over{(n+1)!}$  </p>
+<p>泰勒中值定理<br>:     若f(x)在x-=$x_0$处n+1阶可导, 则有$f(x) = f(x_0) + f^{(1)}(x_0)(x - x_0) + \frac{f^{(2)}(x_0)(x - x_0)^2}{2!} + … + \frac{f^{(n)}(x_0)(x - x_0)^n}{n!} + \frac{f^{(n+1)}(a)(x - x_0)^{n+1} }{(n+1)!}$  </p>
 <p>拉格朗日中值定理推论: 若f^{‘}(x)=0, x∈(a, b), 则f(x)=c, x∈(a, b)  </p>
 <p>积分准则: 导数相同的两个函数只差一个常数  </p>
 <h2 id="泰勒公式"><a href="#泰勒公式" class="headerlink" title="泰勒公式"></a>泰勒公式</h2><p><strong>函数是无穷维的向量</strong><br>线性组合: 将一个一般的向量表现为一组简单的向量的求和.</p>
@@ -188,7 +188,7 @@
 <ol>
 <li><p>表示成幂级数的条件是什么?<br>f(x)有$x - x_0$处可导, $f(x) = f(x_0) + A(x - x_0) + o[x - x_0]$</p>
 </li>
-<li><p>确定$a_0, a_1, a_2, …….$<br>取$x = x_0$, 则$a_0 = f(x_0)$<br>由幂级数的公式, 发现如果求一阶导, 则$a_0会消失, a_2, a_3, ……还会剩下(x - x_0)的结构使得取值后被消掉, 只剩下a_1$<br>则$a_1 = f^’(x_0)$<br>由此得到$a_n = f^{(n)}(x_0) / n! $</p>
+<li><p>确定$a_0, a_1, a_2, …….$<br>取$x = x_0$, 则$a_0 = f(x_0)$<br>由幂级数的公式, 发现如果求一阶导, 则$a_0会消失, a_2, a_3, ……还会剩下(x - x_0)的结构使得取值后被消掉, 只剩下a_1$<br>则$a_1 = f^{‘}(x_0)$<br>由此得到$a_n = f^{(n)}(x_0) / n! $</p>
 </li>
 <li><p>“+…”如何表示?<br><strong>皮亚诺公式</strong> 若f(x)在U($x_0$)中n阶可导, 则在此邻域内有f(x) = $f(x_0) + f’(x_0)(x - x_0) + “f’’(x_0)(x - x_0)” / 2! + … + f^{(x)(x_0)(x - x_0) / n!} + o[(x - x_0)^n] $<br><em>证明:</em><br><em>构造R(x) = f(x) - $(f(x_0) + f’(x_0)(x - x_0) + “f’’(x_0)(x - x_0)” / 2! + … + f^{(x)(x_0)(x - x_0) / n!} + o[(x - x_0)^n] )$</em><br><em>则只要证明$ lim_{x \rightarrow x_0}{R(x_0) / (x - x_0)^n} = 0</em><br><em>易知R(x)及n阶导数都为0</em><br><em>则对极限用n-1次洛必达法则, 得原式 = $lim_{x \rightarrow x_0}{R^(n-1)(x) / “n!(x - x_0)”}$</em><br><em>注意: 因为R(x)的n阶可导只能得出n-1阶连续, 则再用洛必达法则无法求出极限.</em><br><em>此时应用柯西中值定理: $lim_{x \rightarrow x_0}{R^(n-1)(x) / “n!(x - x_0)”}$ = $”lim_{x \rightarrow x_0}{R^(n-1)(x) - R^(n - 1)(x_0)”/ “n!(x - x_0) - 0”}$ = $R^{(n)}(x_0) / n!$ = 0</em>  </p>
 </li>
@@ -216,7 +216,7 @@
 <script type="math/tex; mode=display">\int{secx dx}</script><script type="math/tex; mode=display">= \int{\frac{secx(secx+tanx)dx}{secx+tanx} = \int{\frac{sec^2x+secxtanx}{secx+tanx}dx} } = \int{\frac{1}{secx+tanx}d(secx+tanx)} = ln|secx + tanx| + C</script><hr>
 <script type="math/tex; mode=display">\int{\frac{(x+1)dx}{x^2+x+1} }</script><script type="math/tex; mode=display">= \int{\frac{2x+1+1}{2(x^2+x1)} } = \int{\frac{dx^2+x}{2(x^2+x+1)} } + \int{\frac{dx}{2(x^2+x+1)} } = \frac{ln|x^2+x+1|}{2} + \frac{1}{2}\int{\frac{dx+\frac{1}{2} }{(x+\frac{1}{2})^2+\frac{3}{4} }} = \frac{\sqrt{3} }{3}\int{\frac{d\frac{x+\frac{1}{2} }{\frac{2}{\sqrt{3} }} }{(\frac{x+\frac{1}{2} }{\frac{2}{\sqrt{3} }})^2 + 1} } =  + c</script><h3 id="换元法"><a href="#换元法" class="headerlink" title="换元法"></a>换元法</h3><p>$\int{\frac{dx}{\sqrt{1+e^x} }}$<br>$令t = \sqrt{e^x+1}, 原式 = \int{\frac{1}{t}d(ln(t^2-1))} = \int{t^2-1dt} = \int{\frac{1}{t-1} - \frac{1}{t+1}dt} = ln|\frac{\sqrt{e^x-1}-1}{\sqrt{e^x+1}+1}| + c$<br>解释: 出现分母在根号里面的时候多使用换元法消去根号, 如果式子比较一般通常直接令t = 根号.  </p>
 <hr>
-<script type="math/tex; mode=display">\int{\frac{dx}{x^2\sqrt{1-x^2} }}</script><script type="math/tex; mode=display">令x = sint, 原式 = \int{\frac{dsint}{sin^2t|cost|}= -\int{\frac{1}{sin^2t} } = -\int{cottdt} = -\frac{\sqrt[1-x^2]}{x} + c</script><p>解释: 出现$\sqrt{a-x^2}$时用x = asint代换.  </p>
+<script type="math/tex; mode=display">\int{\frac{dx}{x^2\sqrt{1-x^2} }}</script><script type="math/tex; mode=display">令x = sint, 原式 = \int{\frac{dsint}{sin^2t|cost|}= -\int{\frac{1}{sin^2t} } = -\int{cottdt} = -\frac{\sqrt{ 1-x^2 } }{x} + c</script><p>解释: 出现$\sqrt{a-x^2}$时用x = asint代换.  </p>
 <hr>
 <script type="math/tex; mode=display">\int{\frac{dx}{(1+x^2)^2} }</script><script type="math/tex; mode=display">令x = tant, 原式 = \int{\frac{dtant}{(tan^2t+1)^2} } = \int{\frac{cos^4t}{cos^2t}dt} = \frac{arctanx}{2} + \frac{x}{2(x^2+1)} + c</script><p>解释: 出现$x^2 + 1$在分母上多用x = tant代换.  </p>
 <hr>
@@ -260,15 +260,11 @@
 <hr>
 <h1 id="定积分"><a href="#定积分" class="headerlink" title="定积分"></a>定积分</h1><h2 id="相关定义-1"><a href="#相关定义-1" class="headerlink" title="相关定义"></a>相关定义</h2><p>光滑函数<br>:    二阶可导的函数.<br>充分光滑函数<br>:    无穷可导的函数.  </p>
 <h2 id="三角定律"><a href="#三角定律" class="headerlink" title="三角定律"></a>三角定律</h2><p>$\int^{\frac{\pi}{2} }_0{f(sinx)dx} = \int^{\frac{\pi}{2} }_0{f(cos)}dx$, 只要f(x)在[0, 1]连续. 这个定律表明sinx和cosx在区间上可以互换.  </p>
-<script type="math/tex; mode=display">\int^a_0{\frac{dx}{x+\sqrt{a^2-x^2} }}</script><script type="math/tex; mode=display">令x = asint, 原式 = \int^1_0{\frac{sintdt}{sint + |cost|} }$$, 将sint和cost互换, 得$\frac{\pi}l{4}$
-
-
-## 求弧长
-光滑曲线可以求弧长.  
-则光滑函数f(x)取x为积分变量, 区间[a, b], f(x)在[x, x+dx]上的长度可以用下界x处切线在[x, x+dx]上的长度取代, 得到
-$$ds = \sqrt[2]{(dx)^2 + (dy)^2} = \sqrt{1+(y^{'})^2}dx</script><p>如果f(x) = b(t), x = a(t)  </p>
-<script type="math/tex; mode=display">ds = \sqrt{a^{'2}(t) + b^{'2}(t)}dt</script><p>如果r($\thetaa$)</p>
-<script type="math/tex; mode=display">ds = \sqrt{r^2(\theta) + r^{'2}(\theta)}d\theta</script><h2 id="求面积"><a href="#求面积" class="headerlink" title="求面积"></a>求面积</h2><p><strong>所有面积题, 被积函数都应该变成绝对值</strong><br>极坐标下面积公式: dA = $\frac{r^2(\theta)d\theta}$, 注意极坐标函数求面积是指在笛卡尔坐标系下的情况.<br>旋转曲面: 取[x, x+dx]一段, 底面半径为f(x), 注意因为弧长变化可以很大, 高不能看成直线, 必须使用弧微分, 通过表面积等于2$\pi$底面半径乘高得dS = $2\pi f(x)\sqrt{1+f^{‘2}(x)}dx$  </p>
+<script type="math/tex; mode=display">\int^a_0{\frac{dx}{x+\sqrt{a^2-x^2} }}</script><p>$令x = asint, 原式 = \int^1_0{\frac{sintdt}{sint + |cost|} }$ 将sint和cost互换, 得$\frac{\pi}l{4}$  </p>
+<h2 id="求弧长"><a href="#求弧长" class="headerlink" title="求弧长"></a>求弧长</h2><p>光滑曲线可以求弧长.<br>则光滑函数f(x)取x为积分变量, 区间[a, b], f(x)在[x, x+dx]上的长度可以用下界x处切线在[x, x+dx]上的长度取代, 得到</p>
+<script type="math/tex; mode=display">ds = \sqrt[2]{(dx)^2 + (dy)^2} = \sqrt{1+(y^{'})^2}dx</script><p>如果f(x) = b(t), x = a(t)  </p>
+<script type="math/tex; mode=display">ds = \sqrt{a^{'2}(t) + b^{'2}(t)}dt</script><p>如果r($\theta$)</p>
+<script type="math/tex; mode=display">ds = \sqrt{r^2(\theta) + r^{'2}(\theta)}d\theta</script><h2 id="求面积"><a href="#求面积" class="headerlink" title="求面积"></a>求面积</h2><p><strong>所有面积题, 被积函数都应该变成绝对值</strong><br>极坐标下面积公式: dA = $\frac{r^2(\theta)d\theta}{2}$, 注意极坐标函数求面积是指在笛卡尔坐标系下的情况.<br>旋转曲面: 取[x, x+dx]一段, 底面半径为f(x), 注意因为弧长变化可以很大, 高不能看成直线, 必须使用弧微分, 通过表面积等于2$\pi$底面半径乘高得dS = $2\pi f(x)\sqrt{1+f^{‘2}(x)}dx$  </p>
 <h2 id="求体积"><a href="#求体积" class="headerlink" title="求体积"></a>求体积</h2><h3 id="如果截面面积好求"><a href="#如果截面面积好求" class="headerlink" title="如果截面面积好求"></a>如果截面面积好求</h3><p>则V = $\int^b_a{A(x)dx}$, A(x)为截面面积.  </p>
 <h3 id="如果是旋转体"><a href="#如果是旋转体" class="headerlink" title="如果是旋转体"></a>如果是旋转体</h3><p>设旋转体由曲线f(x), x = a, x = b和x轴围成的梯形旋转而成.<br>如果绕x轴: V = $\pi\int^b_a{f^2(x)dx}$<br>如果绕y轴</p>
 <ol>
@@ -286,10 +282,10 @@ $$ds = \sqrt[2]{(dx)^2 + (dy)^2} = \sqrt{1+(y^{'})^2}dx</script><p>如果f(x) = 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://scefuvh.github.io/2019/12/24/math/" data-id="ck4nreg67000536ep50jegqag" class="article-share-link">Share</a>
+      <a data-url="https://scefuvh.github.io/2019/12/29/math/" data-id="ck4qz63lq00047uep80wzdy0l" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Notes/" rel="tag">Notes</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/notes/" rel="tag">notes</a></li></ul>
 
     </footer>
   </div>
@@ -297,10 +293,19 @@ $$ds = \sqrt[2]{(dx)^2 + (dy)^2} = \sqrt{1+(y^{'})^2}dx</script><p>如果f(x) = 
     
 <nav id="article-nav">
   
+    <a href="/2019/12/29/electromagnetism/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Physics
+        
+      </div>
+    </a>
   
-    <a href="/2019/12/18/electromagnetism/" id="article-nav-older" class="article-nav-link-wrap">
+  
+    <a href="/2019/12/29/linear-mathematics/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">electromagnetism</div>
+      <div class="article-nav-title">Linear-mathematics</div>
     </a>
   
 </nav>
@@ -319,7 +324,7 @@ $$ds = \sqrt[2]{(dx)^2 + (dy)^2} = \sqrt{1+(y^{'})^2}dx</script><p>如果f(x) = 
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Notes/" rel="tag">Notes</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/first-post/" rel="tag">first post</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/notes/" rel="tag">notes</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/first-post/" rel="tag">first post</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/notes/" rel="tag">notes</a></li></ul>
     </div>
   </div>
 
@@ -329,7 +334,7 @@ $$ds = \sqrt[2]{(dx)^2 + (dy)^2} = \sqrt{1+(y^{'})^2}dx</script><p>如果f(x) = 
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Notes/" style="font-size: 20px;">Notes</a> <a href="/tags/first-post/" style="font-size: 10px;">first post</a> <a href="/tags/notes/" style="font-size: 10px;">notes</a>
+      <a href="/tags/first-post/" style="font-size: 10px;">first post</a> <a href="/tags/notes/" style="font-size: 20px;">notes</a>
     </div>
   </div>
 
@@ -351,15 +356,15 @@ $$ds = \sqrt[2]{(dx)^2 + (dy)^2} = \sqrt{1+(y^{'})^2}dx</script><p>如果f(x) = 
       <ul>
         
           <li>
-            <a href="/2019/12/24/math/">Advanced Mathematics</a>
+            <a href="/2019/12/29/electromagnetism/">Physics</a>
           </li>
         
           <li>
-            <a href="/2019/12/18/electromagnetism/">electromagnetism</a>
+            <a href="/2019/12/29/math/">Advanced Mathematics</a>
           </li>
         
           <li>
-            <a href="/2019/12/15/linear-mathematics/">Linear Mathematics</a>
+            <a href="/2019/12/29/linear-mathematics/">Linear-mathematics</a>
           </li>
         
           <li>
