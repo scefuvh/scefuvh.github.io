@@ -11,14 +11,14 @@
 <meta name="keywords" content="notes">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Linear-mathematics">
-<meta property="og:url" content="https:&#x2F;&#x2F;scefuvh.github.io&#x2F;2019&#x2F;12&#x2F;29&#x2F;linear-mathematics&#x2F;index.html">
+<meta property="og:url" content="https:&#x2F;&#x2F;scefuvh.github.io&#x2F;2019&#x2F;12&#x2F;30&#x2F;linear-mathematics&#x2F;index.html">
 <meta property="og:site_name" content="David&#39;s Sweet Hut">
 <meta property="og:description" content="排列相关定义">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;scefuvh&#x2F;linear_mathematics&#x2F;blob&#x2F;master&#x2F;Pics&#x2F;vandermonde_determinant.jpg">
 <meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;scefuvh&#x2F;linear_mathematics&#x2F;blob&#x2F;master&#x2F;arrow_determinant.jpg">
 <meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;scefuvh&#x2F;linear_mathematics&#x2F;blob&#x2F;master&#x2F;x_determinant.jpg">
-<meta property="og:updated_time" content="2019-12-29T12:12:54.022Z">
+<meta property="og:updated_time" content="2019-12-30T09:01:27.246Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https:&#x2F;&#x2F;github.com&#x2F;scefuvh&#x2F;linear_mathematics&#x2F;blob&#x2F;master&#x2F;Pics&#x2F;vandermonde_determinant.jpg">
   
@@ -73,8 +73,8 @@
       <div class="outer">
         <section id="main"><article id="post-linear-mathematics" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2019/12/29/linear-mathematics/" class="article-date">
-  <time datetime="2019-12-28T16:00:00.000Z" itemprop="datePublished">2019-12-29</time>
+    <a href="/2019/12/30/linear-mathematics/" class="article-date">
+  <time datetime="2019-12-29T16:00:00.000Z" itemprop="datePublished">2019-12-30</time>
 </a>
     
   </div>
@@ -115,21 +115,19 @@
 <hr>
 <h1 id="矩阵"><a href="#矩阵" class="headerlink" title="矩阵"></a>矩阵</h1><h2 id="相关定义-2"><a href="#相关定义-2" class="headerlink" title="相关定义"></a>相关定义</h2><p>行矩阵(行向量)<br>:    仅有一行的矩阵.<br>列矩阵(列向量)<br>:    仅有一列的矩阵.<br>零矩阵(O)<br>:    所有元素都为0的矩阵.<br>方阵($(a_{ij})_n$)<br>:    行数等于列数的矩阵.<br>对角矩阵<br>:    除了主对角线上其他元素都为0的矩阵.<br>单位矩阵(E)<br>:    主对角元全为1的的对角矩阵.<br>数量矩阵<br>:    主对角元相等的对角矩阵.<br>三角矩阵<br>:    主对角线一边元素全为0, 另一边全不为0的矩阵.<br>对称矩阵<br>:    关于主对角线对称位置元素相等的矩阵.<br>反对称矩阵<br>:    关于主对角线对称位置元素为相反数的矩阵.<br>同类型矩阵<br>:    行数相等, 列数也相等的多个矩阵.<br>初等矩阵(R)<br>:    单位矩阵经过一次初等变换所得到的矩阵.  </p>
 <h2 id="运算法则"><a href="#运算法则" class="headerlink" title="运算法则"></a>运算法则</h2><h3 id="数乘"><a href="#数乘" class="headerlink" title="数乘"></a>数乘</h3><p>kA即为A中每个元素乘上k.  </p>
-<h3 id="互乘"><a href="#互乘" class="headerlink" title="互乘"></a>互乘</h3><p>$设A=(a_{ij})_{m \times p}, B=(b_{ij})_{p\times n}$, 则  </p>
-<script type="math/tex; mode=display">A \times B = (c_{ij})_{m\times n}, 其中c_{ij} = \sum_{k=1}^p{a_{ik}b_{kj} }$$.  
-互乘运算律:
-设A = $(a_{ij})_{m\times n}$.  
-1. 互乘 **不**满足交换率.  
-3. 互乘 **不**满足消去律.  
-2. 两个非零矩阵的互乘可能是零矩阵.  
-4. $E_mA = A, AE_n = A$  
-5. 互乘有分配律.  
-6. 若$AB = C, 则|A||B| = |C|$  
-7. 若矩阵$A = (a_{ij})_{n}$, 则|kA| = $k^n|A|$  
-8. 等式两边乘一个矩阵时, 只能同时在左边或右边乘.  
-
-### 转置
-$$(B + C)^T = B^T + C^T</script><script type="math/tex; mode=display">(kA^T) = kA^T</script><script type="math/tex; mode=display">(A_1A_2...A_n)^T = A_n^T...A_2^TA_1^T</script><script type="math/tex; mode=display">(A^m)^T = (A^m)^T</script><h3 id="共扼"><a href="#共扼" class="headerlink" title="共扼"></a>共扼</h3><p>A的共扼矩阵为$\overline{A} = (\overline{a_{ij})}$  </p>
+<h3 id="互乘"><a href="#互乘" class="headerlink" title="互乘"></a>互乘</h3><p>设$A=(a_{ij} )_{m \times p}, B=(b_{ij} )_{p\times n}$, 则</p>
+<script type="math/tex; mode=display">A \times B = (c_{ij} )_{m\times n}, 其中c_{ij} = \sum_{k=1}^p{a_{ik}b_{kj} }.</script><p>互乘运算律:<br>设A = $(a_{ij} )_{m\times n}$.  </p>
+<ol>
+<li>互乘 <strong>不</strong>满足交换率.  </li>
+<li>互乘 <strong>不</strong>满足消去律.  </li>
+<li>两个非零矩阵的互乘可能是零矩阵.  </li>
+<li>$E_mA = A, AE_n = A$  </li>
+<li>互乘有分配律.  </li>
+<li>若$AB = C, 则|A||B| = |C|$  </li>
+<li>若矩阵$A = (a_{ij})_{n}$, 则|kA| = $k^n|A|$  </li>
+<li>等式两边乘一个矩阵时, 只能同时在左边或右边乘.  </li>
+</ol>
+<h3 id="转置"><a href="#转置" class="headerlink" title="转置"></a>转置</h3><script type="math/tex; mode=display">(B + C)^T = B^T + C^T</script><script type="math/tex; mode=display">(kA^T) = kA^T</script><script type="math/tex; mode=display">(A_1A_2...A_n)^T = A_n^T...A_2^TA_1^T</script><script type="math/tex; mode=display">(A^m)^T = (A^T)^m</script><h3 id="共扼"><a href="#共扼" class="headerlink" title="共扼"></a>共扼</h3><p>A的共扼矩阵为$\overline{A} = (\overline{a_{ij})}$  </p>
 <script type="math/tex; mode=display">\overline{(A + B)} = \overline{A} + \overline{B}</script><script type="math/tex; mode=display">\overline{kA} = \overline{k}\cdot\overline{A}</script><script type="math/tex; mode=display">\overline{AB} = \overline{A}\cdot\overline{B}</script><h2 id="逆矩阵"><a href="#逆矩阵" class="headerlink" title="逆矩阵"></a>逆矩阵</h2><h3 id="相关定义-3"><a href="#相关定义-3" class="headerlink" title="相关定义"></a>相关定义</h3><p>逆矩阵<br>:    对于n阶方阵A, 如果存在n阶方阵B, 使AB=BA=E, 则A,B互为逆矩阵, 记为$A^{-1}$.<br>奇异矩阵(不可逆矩阵/满秩矩阵)<br>:    若|A|=0, 则|A|是奇异矩阵.<br>非奇异矩阵<br>:    若|A| != 0, 则|A|是非奇异矩阵.<br>伴随矩阵($A^*$)<br>:    对n阶方阵B, |B|的各个余子式按$A_{ij} = a_{ji}$的格式构成的行列式为A的伴随矩阵$B^*$.  </p>
 <h3 id="定理"><a href="#定理" class="headerlink" title="定理"></a>定理</h3><ul>
 <li>A的逆矩阵最多一个.</li>
@@ -352,7 +350,7 @@ $$(B + C)^T = B^T + C^T</script><script type="math/tex; mode=display">(kA^T) = k
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://scefuvh.github.io/2019/12/29/linear-mathematics/" data-id="ck4qz63lt00067uep20tk8ms8" class="article-share-link">Share</a>
+      <a data-url="https://scefuvh.github.io/2019/12/30/linear-mathematics/" data-id="ck4s7r7z30006sjepccuj9lbm" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/notes/" rel="tag">notes</a></li></ul>
@@ -363,11 +361,11 @@ $$(B + C)^T = B^T + C^T</script><script type="math/tex; mode=display">(kA^T) = k
     
 <nav id="article-nav">
   
-    <a href="/2019/12/29/math/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/12/30/math/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          Advanced Mathematics
+          Advanced-mathematics
         
       </div>
     </a>
@@ -426,15 +424,15 @@ $$(B + C)^T = B^T + C^T</script><script type="math/tex; mode=display">(kA^T) = k
       <ul>
         
           <li>
-            <a href="/2019/12/29/electromagnetism/">Physics</a>
+            <a href="/2019/12/30/electromagnetism/">Electronmagnetism</a>
           </li>
         
           <li>
-            <a href="/2019/12/29/math/">Advanced Mathematics</a>
+            <a href="/2019/12/30/math/">Advanced-mathematics</a>
           </li>
         
           <li>
-            <a href="/2019/12/29/linear-mathematics/">Linear-mathematics</a>
+            <a href="/2019/12/30/linear-mathematics/">Linear-mathematics</a>
           </li>
         
           <li>
