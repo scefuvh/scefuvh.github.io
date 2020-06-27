@@ -5,19 +5,20 @@
   
 
   
-  <title>Archives: 2019 | David&#39;s Sweet Hut</title>
+  <title>Storage Optimization | David&#39;s Sweet Hut</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="The blog of David Hu&#39;s">
-<meta property="og:type" content="website">
-<meta property="og:title" content="David&#39;s Sweet Hut">
-<meta property="og:url" content="https://scefuvh.github.io/archives/2019/">
+  <meta name="description" content="SSD Optimization">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Storage Optimization">
+<meta property="og:url" content="https://scefuvh.github.io/storage-optimization/">
 <meta property="og:site_name" content="David&#39;s Sweet Hut">
-<meta property="og:description" content="The blog of David Hu&#39;s">
+<meta property="og:description" content="SSD Optimization">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-04-15T04:51:36.000Z">
+<meta property="article:modified_time" content="2020-04-15T04:51:36.000Z">
 <meta property="article:author" content="David Hu">
 <meta property="article:tag" content="Notes">
-<meta property="article:tag" content=" Reviews">
-<meta property="article:tag" content=" Essays">
+<meta property="article:tag" content="Hardware">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="David&#39;s Sweet Hut" type="application/atom+xml">
@@ -71,78 +72,84 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/electromagnetism/" class="archive-article-date">
-  <time datetime="2019-12-29T16:00:00.000Z" itemprop="datePublished">Dec 30</time>
+        <section id="main"><article id="post-storage-optimization" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/storage-optimization/" class="article-date">
+  <time datetime="2020-04-15T04:51:36.000Z" itemprop="datePublished">2020-04-15</time>
 </a>
-      
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/electromagnetism/">Electronmagnetism</a>
+    <h1 class="article-title" itemprop="name">
+      Storage Optimization
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/motion/" class="archive-article-date">
-  <time datetime="2019-11-08T16:00:00.000Z" itemprop="datePublished">Nov 9</time>
-</a>
+    <div class="article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/motion/">Motion</a>
-    </h1>
-  
+        <h1 id="SSD-Optimization"><a href="#SSD-Optimization" class="headerlink" title="SSD Optimization"></a>SSD Optimization</h1><a id="more"></a>
+<ol>
+<li>Change the kernel parameters to reduce the page write. Write these to /etc/sysctl.d/99-sysctl.<br><strong>NOTE: Any changes directly to /proc/sys/vm/ will be discarded after reboot</strong><figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">vm.dirty_ratio</span>=<span class="number">50</span></span><br><span class="line"><span class="attr">vm.dirty_background_ratio</span>=<span class="number">50</span></span><br><span class="line"><span class="attr">vm.dirty_writeback_centisecs</span>=<span class="number">30000</span></span><br><span class="line"><span class="attr">vm.dirty_expire_centisecs</span>=<span class="number">6000</span></span><br></pre></td></tr></table></figure></li>
+<li>Add <code>discard</code> option to the partition on SSD to /etc/fstab.</li>
+<li>Umount the device using SSD and type <code>tune2fs -O &quot;^has_journal&quot; 使用SSD的已卸载的分区</code></li>
+</ol>
+<h1 id="Laptop"><a href="#Laptop" class="headerlink" title="Laptop"></a>Laptop</h1><p>wirte <code>vm.laptop_mode=5</code> to /etc/sysctl.conf.</p>
+<h1 id="HDD"><a href="#HDD" class="headerlink" title="HDD"></a>HDD</h1><ol>
+<li>Sectors at the beginning of the drive are faster. And a smaller partition requires less movements from the drive’s head. Therefore, it is advised to create a small partition(10GB or so) only for your system, as near to the beginning of the drive as possible. Other data should be kept on a separate partition, usually achieved by separating the home from the root.</li>
+<li>Add <code>commit=一个较大, 最好120左右的数字</code> option to partitions using HDD to increase commit interval.(But will lose more data when suddenly powered off).</li>
+<li>install E4rat</li>
+</ol>
+<h1 id="General"><a href="#General" class="headerlink" title="General"></a>General</h1><ol>
+<li>Add <code>noatime</code> option in /etc/fstab to diable updating access timestamps.</li>
+<li>Add <code>barrier=0</code> option in /etc/fstab to disable wrwrite barriers. It can lead to severe file system corruption and data loss if no battery-backed write cache is on the disk.</li>
+<li>Mount /var/lock and /tmp at the memory.<br><strong>NOTE: Do not mount /var/tmp because that folder is meant for temporary files that are preserved across reboots</strong></li>
+<li>Pass <code>nowatchdog</code> option to the kernel using /etc/default/grub to ban useless watchlog daemon. Also blacklist iTCO_wdt module</li>
+</ol>
+<h1 id="CPU"><a href="#CPU" class="headerlink" title="CPU"></a>CPU</h1><ol>
+<li>pass <code>mitigations=off</code> to kernel using /etc/default/grub to disable the check against meltdown.</li>
+<li>blacklist kernel module <code>capi_cpufreq</code> in /etc/modprobe.d/modprobe.conf.</li>
+</ol>
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/hello/" class="archive-article-date">
-  <time datetime="2019-10-26T16:00:00.000Z" itemprop="datePublished">Oct 27</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/hello/">Hello World</a>
-    </h1>
-  
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://scefuvh.github.io/storage-optimization/" data-id="ckbxgsvc4000528epagks2ri7" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hardware/" rel="tag">Hardware</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Notes/" rel="tag">Notes</a></li></ul>
 
-    </header>
+    </footer>
   </div>
-</article>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/math/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Advanced Mathematics
+        
+      </div>
+    </a>
   
   
-    </div></section>
+    <a href="/remote-github-management/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Remote Github Management</div>
+    </a>
   
+</nav>
 
+  
+</article>
 
 </section>
         

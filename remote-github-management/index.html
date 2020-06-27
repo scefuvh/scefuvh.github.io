@@ -5,17 +5,20 @@
   
 
   
-  <title>remote_github_management | David&#39;s Sweet Hut</title>
+  <title>Remote Github Management | David&#39;s Sweet Hut</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="Preface">
-<meta name="keywords" content="git">
 <meta property="og:type" content="article">
-<meta property="og:title" content="remote_github_management">
-<meta property="og:url" content="https:&#x2F;&#x2F;scefuvh.github.io&#x2F;2020&#x2F;04&#x2F;09&#x2F;remote-github-management&#x2F;index.html">
+<meta property="og:title" content="Remote Github Management">
+<meta property="og:url" content="https://scefuvh.github.io/remote-github-management/">
 <meta property="og:site_name" content="David&#39;s Sweet Hut">
 <meta property="og:description" content="Preface">
-<meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-04-09T11:58:50.464Z">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-04-08T16:00:00.000Z">
+<meta property="article:modified_time" content="2020-04-08T16:00:00.000Z">
+<meta property="article:author" content="David Hu">
+<meta property="article:tag" content="Notes">
+<meta property="article:tag" content="Git">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="David&#39;s Sweet Hut" type="application/atom+xml">
@@ -26,8 +29,10 @@
   
     <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
   
-  <link rel="stylesheet" href="/css/style.css">
-</head>
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.1"></head>
 
 <body>
   <div id="container">
@@ -69,7 +74,7 @@
       <div class="outer">
         <section id="main"><article id="post-remote-github-management" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/04/09/remote-github-management/" class="article-date">
+    <a href="/remote-github-management/" class="article-date">
   <time datetime="2020-04-08T16:00:00.000Z" itemprop="datePublished">2020-04-09</time>
 </a>
     
@@ -81,7 +86,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      remote_github_management
+      Remote Github Management
     </h1>
   
 
@@ -93,7 +98,7 @@
 <p>With the supervision and speed limit getting more<br>and more serious in BaiDu Cloud Store, it is the<br>high time for us to look for a relatively free<br>cloud store site with a reasonable speed limit.<br>Also, for important files, a good backup tool is<br>urgently needed. So using github with git seems a<br>good choice to me.</p>
 <p>In this passage, I will document the detailed<br>process to add an existing git repository into a<br>newly-created github repository.</p>
 <h1 id="Preparations"><a href="#Preparations" class="headerlink" title="Preparations"></a>Preparations</h1><p>First a git local repository (at path /foo/markdown, for example) with some files (like<br>/foo/markdown/git.md) and a cloud github<br>repository (like foo/markdown) is needed. Of<br>course you must have full permissions for the two<br>repository.</p>
-<p>Then, you need to add the SSH key of your computer<br>or local account to your Github account. If not,<br>you should <a href="https://help.github.com/en/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent" title="Help In Github">generate an SSH key and add it to the<br>ssh-agent</a> and then <a href="https://help.github.com/en/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent" title="Help In Github">add the key to your Github account</a>. Check the key regularly as GitHub will remove any SSH key in your account not used for more than a year.</p>
+<p>Then, you need to add the SSH key of your computer<br>or local account to your Github account. If not,<br>you should <a href="https://help.github.com/en/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent" target="_blank" rel="noopener" title="Help In Github">generate an SSH key and add it to the<br>ssh-agent</a> and then <a href="https://help.github.com/en/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent" target="_blank" rel="noopener" title="Help In Github">add the key to your Github account</a>. Check the key regularly as GitHub will remove any SSH key in your account not used for more than a year.</p>
 <h1 id="Main-Processes"><a href="#Main-Processes" class="headerlink" title="Main Processes"></a>Main Processes</h1><p>If there’s already some files in your remote<br>github repository, you need to create a new<br>directory and change into it and create a new<br>repository. If not, just do all<br>the operations in your local repository.</p>
 <p>Fiest, use <code>git remote add 名字 链接</code> to add the<br>链接 of your remote repository in the remote URL<br>list of your local repository under the name of 名<br>字(usually origin for the first one). The 链接 can be in<br>either of two forms below.</p>
 <ol>
@@ -109,10 +114,10 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://scefuvh.github.io/2020/04/09/remote-github-management/" data-id="ck8spksid0001usepexc21v30" class="article-share-link">Share</a>
+      <a data-url="https://scefuvh.github.io/remote-github-management/" data-id="ckbxgsvct000p28ephb8wdhne" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/" rel="tag">git</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/" rel="tag">Git</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Notes/" rel="tag">Notes</a></li></ul>
 
     </footer>
   </div>
@@ -120,10 +125,19 @@
     
 <nav id="article-nav">
   
+    <a href="/storage-optimization/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Storage Optimization
+        
+      </div>
+    </a>
   
-    <a href="/2020/01/01/linear-mathematics/" id="article-nav-older" class="article-nav-link-wrap">
+  
+    <a href="/linear_mathematics/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Linear-mathematics</div>
+      <div class="article-nav-title">Linear-Mathematics</div>
     </a>
   
 </nav>
@@ -142,7 +156,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/first-post/" rel="tag">first post</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/" rel="tag">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/notes/" rel="tag">notes</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/First-Post/" rel="tag">First Post</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hardware/" rel="tag">Hardware</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Math/" rel="tag">Math</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Notes/" rel="tag">Notes</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Physics/" rel="tag">Physics</a></li></ul>
     </div>
   </div>
 
@@ -152,7 +166,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/first-post/" style="font-size: 10px;">first post</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/notes/" style="font-size: 20px;">notes</a>
+      <a href="/tags/First-Post/" style="font-size: 10px;">First Post</a> <a href="/tags/Git/" style="font-size: 10px;">Git</a> <a href="/tags/Hardware/" style="font-size: 10px;">Hardware</a> <a href="/tags/Math/" style="font-size: 15px;">Math</a> <a href="/tags/Notes/" style="font-size: 20px;">Notes</a> <a href="/tags/Physics/" style="font-size: 15px;">Physics</a>
     </div>
   </div>
 
@@ -161,7 +175,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li></ul>
     </div>
   </div>
 
@@ -174,23 +188,23 @@
       <ul>
         
           <li>
-            <a href="/2020/04/09/remote-github-management/">remote_github_management</a>
+            <a href="/math/">Advanced Mathematics</a>
           </li>
         
           <li>
-            <a href="/2020/01/01/linear-mathematics/">Linear-mathematics</a>
+            <a href="/storage-optimization/">Storage Optimization</a>
           </li>
         
           <li>
-            <a href="/2019/12/30/electromagnetism/">Electronmagnetism</a>
+            <a href="/remote-github-management/">Remote Github Management</a>
           </li>
         
           <li>
-            <a href="/2019/12/30/math/">Advanced-mathematics</a>
+            <a href="/linear_mathematics/">Linear-Mathematics</a>
           </li>
         
           <li>
-            <a href="/2019/11/09/motion/">Motion</a>
+            <a href="/electromagnetism/">Electronmagnetism</a>
           </li>
         
       </ul>
@@ -223,11 +237,17 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
 
 
 <script src="/js/script.js"></script>
+
 
 
 
