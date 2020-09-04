@@ -5,20 +5,21 @@
   
 
   
-  <title>Remote Github Management | David&#39;s Sweet Hut</title>
+  <title>Backlight Adjustment | David&#39;s Sweet Hut</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Preface">
+  <meta name="description" content="The settings of backlight lie in &#x2F;sys&#x2F;class&#x2F;backlight. Change the value of intel_backlight&#x2F;brightness to change the backlight.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Remote Github Management">
-<meta property="og:url" content="https://scefuvh.github.io/remote-github-management/">
+<meta property="og:title" content="Backlight Adjustment">
+<meta property="og:url" content="https://scefuvh.github.io/Backlight-Adjustment/">
 <meta property="og:site_name" content="David&#39;s Sweet Hut">
-<meta property="og:description" content="Preface">
+<meta property="og:description" content="The settings of backlight lie in &#x2F;sys&#x2F;class&#x2F;backlight. Change the value of intel_backlight&#x2F;brightness to change the backlight.">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-04-08T16:00:00.000Z">
-<meta property="article:modified_time" content="2020-04-08T16:00:00.000Z">
+<meta property="article:published_time" content="2020-09-03T16:00:00.000Z">
+<meta property="article:modified_time" content="2020-09-03T16:00:00.000Z">
 <meta property="article:author" content="David Hu">
 <meta property="article:tag" content="Notes">
-<meta property="article:tag" content="Git">
+<meta property="article:tag" content="Linux">
+<meta property="article:tag" content="System">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="David&#39;s Sweet Hut" type="application/atom+xml">
@@ -72,10 +73,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-remote-github-management" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-Backlight-Adjustment" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/remote-github-management/" class="article-date">
-  <time datetime="2020-04-08T16:00:00.000Z" itemprop="datePublished">2020-04-09</time>
+    <a href="/Backlight-Adjustment/" class="article-date">
+  <time datetime="2020-09-03T16:00:00.000Z" itemprop="datePublished">2020-09-04</time>
 </a>
     
   </div>
@@ -86,7 +87,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Remote Github Management
+      Backlight Adjustment
     </h1>
   
 
@@ -94,30 +95,15 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="Preface"><a href="#Preface" class="headerlink" title="Preface"></a>Preface</h1><a id="more"></a>
-<p>With the supervision and speed limit getting more<br>and more serious in BaiDu Cloud Store, it is the<br>high time for us to look for a relatively free<br>cloud store site with a reasonable speed limit.<br>Also, for important files, a good backup tool is<br>urgently needed. So using github with git seems a<br>good choice to me.</p>
-<p>In this passage, I will document the detailed<br>process to add an existing git repository into a<br>newly-created github repository.</p>
-<h1 id="Preparations"><a href="#Preparations" class="headerlink" title="Preparations"></a>Preparations</h1><p>First a git local repository (at path /foo/markdown, for example) with some files (like<br>/foo/markdown/git.md) and a cloud github<br>repository (like foo/markdown) is needed. Of<br>course you must have full permissions for the two<br>repository.</p>
-<p>Then, you need to add the SSH key of your computer<br>or local account to your Github account. If not,<br>you should <a href="https://help.github.com/en/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent" target="_blank" rel="noopener" title="Help In Github">generate an SSH key and add it to the<br>ssh-agent</a> and then <a href="https://help.github.com/en/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent" target="_blank" rel="noopener" title="Help In Github">add the key to your Github account</a>. Check the key regularly as GitHub will remove any SSH key in your account not used for more than a year.</p>
-<h1 id="Main-Processes"><a href="#Main-Processes" class="headerlink" title="Main Processes"></a>Main Processes</h1><p>If there’s already some files in your remote<br>github repository, you need to create a new<br>directory and change into it and create a new<br>repository. If not, just do all<br>the operations in your local repository.</p>
-<p>Fiest, use <code>git remote add 名字 链接</code> to add the<br>链接 of your remote repository in the remote URL<br>list of your local repository under the name of 名<br>字(usually origin for the first one). The 链接 can be in<br>either of two forms below.</p>
-<ol>
-<li>git@github.com:作者名/仓库名: this form will<br>use SSH to connect. So you need not to input<br>the username and passphrase every time you want<br>to push/pull as long as the SSH key of your<br>computer or account is stored at your GitHub<br>account.</li>
-<li>The regular URL used in the browser to access<br>your repository: it need no SSH key but will<br>force you to input username and password every<br>time.</li>
-</ol>
-<p>After which, <code>git fetch</code> and <code>git pull
---set-upstream 名字 分支</code> to pull the file in the<br>remote repository(if any).</p>
-<p>Move your file to the directory if you create the<br>repository at a new directory.</p>
-<p><code>git add</code> and <code>git commit</code>.</p>
-<p>Finally, use <code>git push</code> to push your new commit to<br>GitHub.</p>
+        <p>The settings of backlight lie in <code>/sys/class/backlight</code>. Change the value of <code>intel_backlight/brightness</code> to change the backlight.</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://scefuvh.github.io/remote-github-management/" data-id="ckenoqdn600135wepb6tc854a" class="article-share-link">Share</a>
+      <a data-url="https://scefuvh.github.io/Backlight-Adjustment/" data-id="ckenoqdm000055wepbh5sb5a9" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/" rel="tag">Git</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Notes/" rel="tag">Notes</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/" rel="tag">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Notes/" rel="tag">Notes</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/System/" rel="tag">System</a></li></ul>
 
     </footer>
   </div>
@@ -125,19 +111,10 @@
     
 <nav id="article-nav">
   
-    <a href="/storage-optimization/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          Storage Optimization
-        
-      </div>
-    </a>
   
-  
-    <a href="/linear_mathematics/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/Polkit-Failure-After-Restoring/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Linear-Mathematics</div>
+      <div class="article-nav-title">Polkit Failure After Restoring</div>
     </a>
   
 </nav>
