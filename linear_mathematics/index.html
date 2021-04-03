@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Linear-Mathematics | David&#39;s Sweet Hut</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="排列相关定义">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linear-Mathematics">
+<meta property="og:url" content="https://scefuvh.github.io/linear_mathematics/">
+<meta property="og:site_name" content="David&#39;s Sweet Hut">
+<meta property="og:description" content="排列相关定义">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://github.com/scefuvh/linear_mathematics/blob/master/Pics/vandermonde_determinant.jpg">
+<meta property="og:image" content="https://github.com/scefuvh/linear_mathematics/blob/master/arrow_determinant.jpg">
+<meta property="og:image" content="https://github.com/scefuvh/linear_mathematics/blob/master/x_determinant.jpg">
+<meta property="article:published_time" content="2019-12-31T16:00:00.000Z">
+<meta property="article:modified_time" content="2020-06-25T06:24:09.201Z">
+<meta property="article:author" content="David Hu">
+<meta property="article:tag" content="Notes">
+<meta property="article:tag" content="Math">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://github.com/scefuvh/linear_mathematics/blob/master/Pics/vandermonde_determinant.jpg">
+  
+    <link rel="alternate" href="/atom.xml" title="David&#39;s Sweet Hut" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">David&#39;s Sweet Hut</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://scefuvh.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-linear_mathematics" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/linear_mathematics/" class="article-date">
+  <time datetime="2019-12-31T16:00:00.000Z" itemprop="datePublished">2020-01-01</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Linear-Mathematics
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="排列"><a href="#排列" class="headerlink" title="排列"></a>排列</h1><h2 id="相关定义"><a href="#相关定义" class="headerlink" title="相关定义"></a>相关定义</h2><span id="more"></span>
+<p>排列<br>:    n阶排列是n个有序的数组成的的排列<br>一共有n!个n阶排列.<br>数对<br>:    排列中任意两个数组成的二元组.<br>顺序<br>:    数对(i, k)(i $&lt;$ k).<br>逆序<br>:    数对(i, k)(i $&gt;$ k).<br>逆序数<br>:    排列中逆序的个数.记为τ(12345…)<br>奇偶排列<br>:    逆序对为偶数的是偶排列, 为奇数的是奇排列.<br>自然排列<br>:   按12345的顺序的排列.<br>对换<br>:    交换排列中的任意两个数.  </p>
+<h2 id="相关定理"><a href="#相关定理" class="headerlink" title="相关定理"></a>相关定理</h2><p><strong>排列对换改变奇偶性.</strong><br><strong>n阶排列中奇偶排列各占一半.</strong>  </p>
+<hr>
+<h1 id="行列式"><a href="#行列式" class="headerlink" title="行列式"></a>行列式</h1><h2 id="相关定义-1"><a href="#相关定义-1" class="headerlink" title="相关定义"></a>相关定义</h2><p>主对角线<br>:    “\”方向的对角线.<br>次对角线<br>:    “/“方向的对角线.<br>转置行列式<br>:    设 $ D=|a_{ij}| $ , 则 $ D^T = |a_{ji}| $ 即为转置行列式.<br>余子式($M^{(n-k)}$)<br>:    在n阶行列式D=|$a_{ij}$|中, 去掉第$i_1, i_2, …… i_n$行和第$j_1, j_2, … j_n$列交叉点所有的元素$a_{ij}$, 剩下的元素按原来的相对位置构成的行列式叫做D中k阶子式$N^{(k)}$的余子式.<br>代数余子式($A^{(n-k)}$)<br>:    $A^{(n-k)} = M^{(n-k)}(-1)^{i_1+i_2+…+i_n+j_i+j_2+…+j_n}$<br>子式($N^{(k)}$)<br>:    在n阶行列式中选取k行k列, 将交叉点处的元素按原来的相对位置组成一个新的行列式, 成为D的一个k阶子式.<br>拉普拉斯定理<br>:    在n阶行列式D中给定的k行的所有的子式乘上对应的代数余子式的和等于D的值.</p>
+<h2 id="计算方法"><a href="#计算方法" class="headerlink" title="计算方法"></a>计算方法</h2><p>二阶: 主对角元乘积 - 次对角元乘积.<br>三阶: 穿针法.<br>n阶: 从1-n行, 每行选取一个与之前所选元素不重复的列的元素相乘, 将所有可能相加.<br>定义公式: $ D=|a_{ij}|_n=(-1)^{\tau(i_1i_2…i_n)} + \sum_{k_1k_2k_3…k_n}(-1)^{\tau(k_1k_2…k_n)}a_{i_1k_1} a_{i_2k_2} a_{i_3k_3} … a_{i_nk_n} $, <strong>$(i_1i_2i_3…i_n)$为一个给定的排列.</strong><br>实际操作: 利用含有1的列不断将同列其他元素变为0后再展开依次降阶.  </p>
+<h2 id="相关性质"><a href="#相关性质" class="headerlink" title="相关性质"></a>相关性质</h2><ul>
+<li>行列式具有对称性.  </li>
+<li>$ D^T = D $</li>
+<li>交换行列式中任意两行, 行列式的值变为相反数.  </li>
+<li>行列式中两行成比例, 则行列式值为0.  </li>
+<li>行列式中一行元素乘k, 行列式值乘k.  </li>
+<li>若行列式存在0行, 值为0.  </li>
+<li>若行列式中一行的每个元素都是两个元素$a_{ij}, b_{ij}$的和, 则行列式值等于分别用$a_{ij}和b_{ij}$替换该行元素的两个新行列式的值的和.  </li>
+<li>行列式中一行元素乘上k后加到另一行对应列元素上, 行列式值不变.  </li>
+</ul>
+<h2 id="乘积公式"><a href="#乘积公式" class="headerlink" title="乘积公式"></a>乘积公式</h2><p>设两个n阶行列式$D_1 = |a_{ij}|, D_2 = |b_{ij}|, 则$  </p>
+<script type="math/tex; mode=display">D_1 * D_2 = |c_{ij}|, 则|c_{ij}| = \sum_{k=1}^na_{ik}b_{kj}</script><h2 id="求导运算"><a href="#求导运算" class="headerlink" title="求导运算"></a>求导运算</h2><p>对一个行列式求导等于对行列式每一单独行求导, 其它行不变组成的多个行列式的和.  </p>
+<h2 id="特殊的行列式"><a href="#特殊的行列式" class="headerlink" title="特殊的行列式"></a>特殊的行列式</h2><p><img src="https://github.com/scefuvh/linear_mathematics/blob/master/Pics/vandermonde_determinant.jpg" alt="范德蒙德行列式" title="范德蒙德行列式"><br><img src="https://github.com/scefuvh/linear_mathematics/blob/master/arrow_determinant.jpg" alt="箭形行列式" title="箭形行列式"><br><img src="https://github.com/scefuvh/linear_mathematics/blob/master/x_determinant.jpg" alt="X形行列式" title="X形行列式"></p>
+<hr>
+<h1 id="矩阵"><a href="#矩阵" class="headerlink" title="矩阵"></a>矩阵</h1><h2 id="相关定义-2"><a href="#相关定义-2" class="headerlink" title="相关定义"></a>相关定义</h2><p>行矩阵(行向量)<br>:    仅有一行的矩阵.<br>列矩阵(列向量)<br>:    仅有一列的矩阵.<br>零矩阵(O)<br>:    所有元素都为0的矩阵.<br>方阵($(a_{ij})_n$)<br>:    行数等于列数的矩阵.<br>对角矩阵<br>:    除了主对角线上其他元素都为0的矩阵.<br>单位矩阵(E)<br>:    主对角元全为1的的对角矩阵.<br>数量矩阵<br>:    主对角元相等的对角矩阵.<br>三角矩阵<br>:    主对角线一边元素全为0, 另一边全不为0的矩阵.<br>对称矩阵<br>:    关于主对角线对称位置元素相等的矩阵.<br>反对称矩阵<br>:    关于主对角线对称位置元素为相反数的矩阵.<br>同类型矩阵<br>:    行数相等, 列数也相等的多个矩阵.<br>初等矩阵(R)<br>:    单位矩阵经过一次初等变换所得到的矩阵.  </p>
+<h2 id="运算法则"><a href="#运算法则" class="headerlink" title="运算法则"></a>运算法则</h2><h3 id="数乘"><a href="#数乘" class="headerlink" title="数乘"></a>数乘</h3><p>kA即为A中每个元素乘上k.  </p>
+<h3 id="互乘"><a href="#互乘" class="headerlink" title="互乘"></a>互乘</h3><p>设$A=(a_{ij} )_{m \times p}, B=(b_{ij} )_{p\times n}$, 则</p>
+<script type="math/tex; mode=display">A \times B = (c_{ij} )_{m\times n}, 其中c_{ij} = \sum_{k=1}^p{a_{ik}b_{kj} }.</script><p>互乘运算律:<br>设A = $(a_{ij} )_{m\times n}$.  </p>
+<ol>
+<li>互乘 <strong>不</strong>满足交换率.  </li>
+<li>互乘 <strong>不</strong>满足消去律.  </li>
+<li>两个非零矩阵的互乘可能是零矩阵.  </li>
+<li>$E_mA = A, AE_n = A$  </li>
+<li>互乘有分配律.  </li>
+<li>若$AB = C, 则|A||B| = |C|$  </li>
+<li>若矩阵$A = (a_{ij})_{n}$, 则|kA| = $k^n|A|$  </li>
+<li>等式两边乘一个矩阵时, 只能同时在左边或右边乘.  </li>
+</ol>
+<h3 id="转置"><a href="#转置" class="headerlink" title="转置"></a>转置</h3><script type="math/tex; mode=display">(B + C)^T = B^T + C^T</script><script type="math/tex; mode=display">(kA^T) = kA^T</script><script type="math/tex; mode=display">(A_1A_2...A_n)^T = A_n^T...A_2^TA_1^T</script><script type="math/tex; mode=display">(A^m)^T = (A^T)^m</script><h3 id="共扼"><a href="#共扼" class="headerlink" title="共扼"></a>共扼</h3><p>A的共扼矩阵为$\overline{A} = (\overline{a_{ij})}$  </p>
+<script type="math/tex; mode=display">\overline{(A + B)} = \overline{A} + \overline{B}</script><script type="math/tex; mode=display">\overline{kA} = \overline{k}\cdot\overline{A}</script><script type="math/tex; mode=display">\overline{AB} = \overline{A}\cdot\overline{B}</script><h2 id="逆矩阵"><a href="#逆矩阵" class="headerlink" title="逆矩阵"></a>逆矩阵</h2><h3 id="相关定义-3"><a href="#相关定义-3" class="headerlink" title="相关定义"></a>相关定义</h3><p>逆矩阵<br>:    对于n阶方阵A, 如果存在n阶方阵B, 使AB=BA=E, 则A,B互为逆矩阵, 记为$A^{-1}$.<br>奇异矩阵(不可逆矩阵/满秩矩阵)<br>:    若|A|=0, 则|A|是奇异矩阵.<br>非奇异矩阵<br>:    若|A| != 0, 则|A|是非奇异矩阵.<br>伴随矩阵($A^*$)<br>:    对n阶方阵B, |B|的各个余子式按$A_{ij} = a_{ji}$的格式构成的行列式为A的伴随矩阵$B^*$.  </p>
+<h3 id="定理"><a href="#定理" class="headerlink" title="定理"></a>定理</h3><ul>
+<li>A的逆矩阵最多一个.</li>
+<li>设A为n阶方阵, A可逆的充要条件是|A| != 0, $A^{-1}=\frac{A^{*} }{|A|}$  </li>
+<li>对于n阶方阵$A_1A_2…A_k = nE, 且n != 0$, 则$A_1$到$A_k$都可逆.  </li>
+</ul>
+<h3 id="运算性质"><a href="#运算性质" class="headerlink" title="运算性质"></a>运算性质</h3><ul>
+<li><script type="math/tex; mode=display">(A^{-1})^{-1}=A</script></li>
+<li><script type="math/tex; mode=display">(kA)^{-1}=k^{-1} \times A^{-1}</script></li>
+<li><script type="math/tex; mode=display">A^n \times A^k = A^{(n + k)}, n,k∈Z</script></li>
+<li><script type="math/tex; mode=display">|A^{-1}| = |A|^{-1}</script></li>
+<li><script type="math/tex; mode=display">(\prod_{i=1}^mA_i)^{-1} = \prod_{i = m}^1A_i^{-1}</script></li>
+<li><script type="math/tex; mode=display">(A^T)^{-1}=(A^{-1})^T</script></li>
+<li><script type="math/tex; mode=display">AxA^*=A^*xA=|A|E</script></li>
+<li><script type="math/tex; mode=display">A=(a_{ij}), AA^*=(b_{ij}), 则b_{ji}=a_{i1}A_{j1} + a_{i2}A_{j2} + a_{i3}A_{j3} + ... + a_{in}A_{jn}</script></li>
+<li><script type="math/tex; mode=display">A^{-1}|A| = A^*</script></li>
+<li><script type="math/tex; mode=display">(AB)^{-1} = B^{-1}A^{-1}</script></li>
+<li><script type="math/tex; mode=display">(AB)^{*} = B^{*}A^{*}</script></li>
+<li><script type="math/tex; mode=display">(A^T)^* = (A^*)^T</script></li>
+<li><script type="math/tex; mode=display">(A^{*})^{-1} = (A^{-1})^{*}</script></li>
+<li><script type="math/tex; mode=display">(A^{*})^{*} = |A|^{n-2}A</script></li>
+<li><script type="math/tex; mode=display">(-A)^* = (-1)^{n-1}A^*</script></li>
+<li><script type="math/tex; mode=display">|A^*| = |A|^{n-1}</script><em>证明</em><br><em>若$|A| != 0, A^{</em>}A = |A|E, 两边取行列式得|A||A^{<em>}| = |A|^n$.</em><br><em>若$|A|=0$, 则易证.</em>  </li>
+<li>对角矩阵A的逆矩阵即对角元倒数组成的矩阵.  </li>
+<li>二阶矩阵快速求法  <strong>主对调, 副变号, 再处以矩阵对应的行列式</strong>  </li>
+</ul>
+<h2 id="矩阵的初等变换和矩阵的秩"><a href="#矩阵的初等变换和矩阵的秩" class="headerlink" title="矩阵的初等变换和矩阵的秩"></a>矩阵的初等变换和矩阵的秩</h2><h3 id="相关定义-4"><a href="#相关定义-4" class="headerlink" title="相关定义"></a>相关定义</h3><p>初等行(列)变换:  </p>
+<ol>
+<li>交换矩阵两行(列).  </li>
+<li>矩阵某一行(列)乘上一个不为零的数.  </li>
+<li>矩阵某一行(列)加上另一行(列)的某个倍数.<br>阶梯形矩阵<br>:    在行号递增下, 非零行的第一个非零元素所在的列号递增的矩阵.<br>规范(简化的)的阶梯形矩阵<br>:    非零行第一个元素为1, 且该元素所在的列的其他元素为0的阶梯形矩阵.<br>标准形矩阵<br>:    左上角为单位矩阵, 其它元素为0的矩阵.<br>矩阵的轶(r(A))<br>:    存在不为零的最高阶子式.<br>k阶子式<br>:    矩阵A中任取k行k列的k^2个元素组成的行列式.<br>线性方程的矩阵表示<br>:    Ax = B, A由线性方程左侧含有x项的系数组成, B由等号右边的常数项组成.  </li>
+</ol>
+<h3 id="相关定理-1"><a href="#相关定理-1" class="headerlink" title="相关定理"></a>相关定理</h3><ul>
+<li>任何矩阵经过初等 <strong>行</strong>变换就可以变为简化的阶梯形矩阵.<br><em>方法: 逐列检查法</em><br><em>找到列号最小的非零列的第一个非零元素, 使它到第一行, 然后通过3号变换使其之下的元素变为0</em><br><em>对第一个非零行的第一个非零元素右下角的子矩阵重复上一步和这一步</em>  </li>
+<li>任何矩阵经过初等变换就可以成为标准形矩阵.  </li>
+<li>阶梯形矩阵等于它的非零行个数.  </li>
+<li>子矩阵的秩小于等于矩阵的秩.  </li>
+<li>初等变换不改变矩阵的秩.  </li>
+<li>初等矩阵左乘矩阵A为对A做相应的初等行变换, 右乘为列变换, 因此A可以通过乘上一系列初等矩阵成为标准形矩阵.  </li>
+<li>初等矩阵都是可逆矩阵, 其逆矩阵为原先单位矩阵做初等变换的逆变换.  </li>
+<li>矩阵A可逆的充要条件是A能写成一系列初等矩阵乘积.  </li>
+<li>n阶方阵A可逆的充要条件是A的标准形矩阵为n阶单位矩阵.  </li>
+<li>任何可逆矩阵都可经过初等 <strong>行</strong>变换为单位矩阵.  </li>
+<li>设A为m$\times$n矩阵, 则r(A)=1的充要条件是$\exists$不为0的m$\times$1矩阵B和1$\times$n矩阵C使得A = BC.  </li>
+<li>矩阵的秩和标准形矩阵相同的多个矩阵等价.  </li>
+<li>r(A + B) $\leq$ r(A) + r(B)<br>  证明<ul>
+<li>max(r(A), r(B)) $\leq$ r(A B) $\leq$ r(A) + r(B)  </li>
+</ul>
+</li>
+<li>r(AB) $\leq$ min(r(A), r(B))<br>  证明</li>
+<li>设$A_{m\times n}, B_{n\times p}$, 则r(A) + r(B) $&lt;$ n.<br>  证明</li>
+</ul>
+<h3 id="初等变换求矩阵的逆矩阵"><a href="#初等变换求矩阵的逆矩阵" class="headerlink" title="初等变换求矩阵的逆矩阵"></a>初等变换求矩阵的逆矩阵</h3><p>因为任何可逆矩阵都可经过初等 <strong>行</strong>变换为单位矩阵, 所以A = PE, P是一系列初等矩阵的乘积, 所以$A^{-1} = P^{-1}$, 若$P = P_1P_2P_3…P_n, 则A^{-1} = P_n^{-1}…P_3^{-1}P_2^{-1}P_1^{-1}E$, 结合A = PE得到的$P^{-1}A = E$. 利用分块矩阵, $P^{-1}(A E) = (E A^{-1})$.<br>那么, 只要构造n$\times$2n阶方阵(A E)并对其做初等行变换至A变为E, 则E就变为$A^{-1}$; 若无法达成, 则A不可逆.<br>类似, AX = B的方程可以将(A B)初等行变换成(E $A^{-1}B$)来解决.<br>XA = B的方程可以通过转置变成AX = B形式.  </p>
+<h2 id="分块矩阵及其初等变换"><a href="#分块矩阵及其初等变换" class="headerlink" title="分块矩阵及其初等变换"></a>分块矩阵及其初等变换</h2><p>乘法定义: 若未分块矩阵A和B.<br>行列式第一降阶定理<br>:    M = $\left(<br>\begin{matrix}<br>A &amp; B \ C &amp; D<br>\end{matrix}<br>\right)$其中A, D为方阵, |A| != 0, 则|M| = |A||D - C$A^{-1}$B|.<br>初等变换:</p>
+<ol>
+<li>交换分块矩阵的两行.</li>
+<li>用一个合适的可逆矩阵左(友)乘某一行(列).</li>
+<li>将某一行(列)的各个子块加上一个合适的矩阵左(右)乘另一行(列)所得的对应子块.</li>
+</ol>
+<hr>
+<h1 id="n维向量"><a href="#n维向量" class="headerlink" title="n维向量"></a>n维向量</h1><h2 id="相关定义-5"><a href="#相关定义-5" class="headerlink" title="相关定义"></a>相关定义</h2><p>n维向量<br>:    n个数组成的有序数组. 默认列向量.<br>分量<br>:    向量中的任意一个数.<br>零向量<br>:    所有分量全部为0的向量.<br>向量相等<br>:    每个分量都相等的同维向量相等.<br>线性组合(线性表示)<br>:    对n维向量$a_1, a_2 … a_n, b$若存在数$k_1, k_2, … ,k_n$使得$b = k_1a_1 + k_2a_2 + … + k_na_n$则称b是向量$a_1, a_2 … a_n, b$的一个线性组合, 这些k为组合系数或称表示系数.<br>向量组等价<br>:    多个彼此可以互相线性表示的向量组.<br>线性相关<br>:    若存在不全为0的实数$k_1, k_2 \cdots k_n$使$a_1, a_2 \cdots a_n = 0$, 则称这些向量线性相关.<br>截短向量与接长向量<br>:    从原始向量的一部分为原始向量的截短向量, 原始向量是那一部分的接长向量.<br>极大线性无关组(极大无关组)<br>:    设($b_1, b_2, \cdots b_n$)是向量组$a_1, a_2, \cdots a_n$的一部分, 若b向量组线性无关且a向量组的每一个向量都可以由b向量组线性表示, 则称b组是a组的极大无关组.<br>向量组的秩<br>:    零向量组的秩为0, 非零向量组的秩为其极大无关组的向量个数.<br>矩阵的列(行)秩<br>:    矩阵A的列(行)向量组的秩称为矩阵的列(行)秩.  </p>
+<h2 id="相关定理-2"><a href="#相关定理-2" class="headerlink" title="相关定理"></a>相关定理</h2><ul>
+<li>$a_1, a_2, \cdots a_n$与b线性相关的充要条件是其对应的线性方程组有解.  </li>
+<li>$b_1, b_2, \cdots b_n$可由$a_1, a_2, \cdots a_n$线性表示的充要条件是以$a_1, a_2, \cdots a_n$为列构造的矩阵与$a_1, a_2, \cdots a_n, b_1, b_2, \cdots b_n$为列构造的矩阵的秩相等.  </li>
+<li>n维向量$a_1, a_2, \cdots a_n$线性相关的充要条件为对应的齐次线性方程组有非零解, 也即|($a_1, a_2, \cdots a_n$)| = 0或r($a_1, a_2, \cdots a_n$) $&lt;$ 未知数个数或$a_1, a_2, \cdots a_n$的维数$&lt;$n.  </li>
+<li>$a_1, a_2, \cdots a_n$线性相(无)关, 则其中任何部分的向量之间也线性相(无)关.  </li>
+<li>若一些向量线性无关, 则他们的接长向量也线性无关.  </li>
+<li>一个向量组的所有极大无关组与该向量组等价.  </li>
+<li>向量组$a_1, a_2, \cdots a_n$有极大无关组的充要条件是向量组里存在非零向量.<br>  <em>因为含有零向量矩阵一定线性相关, 则必要性得证.</em><br>  <em>下面证明充分性, 设a向量组中至少一个非零向量, 则从它不能表示的向量组中的向量中挑一个与它组成新的向量组, 则这两个向量线性无关, 递归以上过程直到出现极大无关组.</em><br>  <em>因为以上过程一定可行, 则充分性可证</em>  </li>
+<li><p>两个向量数为s和t, s&gt;t的向量组a, b, 若a能被b线性表示, 则a线性相关.<br>  <em>欲证明此事, 只要有不全为零的数$k_1, k_2, \cdots k_s$, 令$\sum_{i=1}^{s}{k_ia_i} = 0$即可</em><br>  <em>设$a_i = \sum_{i=1}^{t}{l_{ji}b_j}, i\in[1, s]\in N^+$, 则</em>  </p>
+<script type="math/tex; mode=display">a_i = (b_1, b_2 \cdots b_t)(l_{1i}, l_{2i} \cdots l_{ti})^T</script><p>  <em>合并以上s个等式.</em>  </p>
+<script type="math/tex; mode=display">(a_1, a_2 \cdots a_s) = (b_1, b_2 \cdots b_t)\left(\begin{matrix}
+  l_{11} & l_{12} & \cdots & l_{1s} \\
+  l_{21} & l_{22} & \cdots & l_{2s} \\
+  \vdots & \vdots &   & \vdots \\
+  l_{t1} & l_{t2} & \cdots & l_{ts} \\
+  \end{matrix}\right)</script><p>  <em>设C为右边的矩阵, Cx = 0</em><br>  <em>则因为s&gt;t, r(C) = r($\breve C$) $&lt;$ s, 故上面的方程组有非零解.</em><br>  <em>即存在$k_1, k_2, \cdots k_s$, 使得C$(k_1, k_2, \cdots k_s)^T$ = 0.</em><br>  <em>因为$\sum_{i=1}^{s}{k_ia_i} = (a_1, a_2 \cdots a_s)(k_1, k_2, \cdots k_s)^T = (b_1, b_2 \cdots b_t)C(k_1, k_2, \cdots k_s) = 0$.</em><br>  <em>得证.</em>  </p>
+<ul>
+<li>逆否命题: 若a向量组线性无关, 可由b向量组表示, 则a向量组的向量个数$\leq$b向量组的向量个数.  </li>
+<li>推论: 两个线性无关的等价向量组必有相同向量个数.  </li>
+<li>推论: 同一向量组的极大无关组向量个数相等.  </li>
+</ul>
+</li>
+<li><p>向量组线性无关的充要条件是向量组的秩等于向量组的向量个数.  </p>
+</li>
+<li>等价向量组秩相等.  </li>
+<li>向量组内任意一个向量个数等于向量组的秩的子向量组都是原向量组的极大无关组.  </li>
+<li>若向量组a可以由向量组b线性表示, 则a的秩$\leq$b的秩.  </li>
+<li>矩阵A的列向量组的秩等于矩阵的秩.  <ul>
+<li>对矩阵做初等行变换不影响列向量的线性关系, 可以以此求解向量组的秩与极大无关组.  </li>
+</ul>
+</li>
+<li>若向量组a线性无关, 可由向量组b表示, 则系数构成的矩阵A的秩就是b向量组的秩.  <ul>
+<li>若A的列向量组的极大无关组为c, 则b中对应编号的向量构成的向量组d就是b的极大无关组.  </li>
+<li>A的第k列$c_k$由c线性表示的系数即$b_k$由d线性表示的系数.  </li>
+</ul>
+</li>
+<li>若向量组$a_1, a_2 \cdots a_m$线性无关, 加入向量$b_1$的向量组a+线性相关, 则b可由a线性表示, 系数唯一.<br>  证明<br>  因为$a_1, a_2 \cdots a_m$和$b_1$线性相关, 所以存在不全为零的实数$k_1, k_2 \cdots k_m, k$, 使得$k_1a_1 + k_2a_2 \cdots k_ma_m + kb_1 = 0$</li>
+</ul>
+<h2 id="运算律"><a href="#运算律" class="headerlink" title="运算律"></a>运算律</h2><p>同矩阵运算律.<br>只有所有分量相等的两个向量才相等.  </p>
+<hr>
+<h1 id="解线性方程组"><a href="#解线性方程组" class="headerlink" title="解线性方程组"></a>解线性方程组</h1><h2 id="方程组形式"><a href="#方程组形式" class="headerlink" title="方程组形式"></a>方程组形式</h2><p>矩阵形式: Ax = b, 其中A是一个矩阵, x是一个列向量(又称解向量), b是一个列矩阵.<br>向量表示: $x_1\alpha_1 + x_2\alpha_2 + … + x_n\alpha_n = \beta$.<br>其中$\alpha_i = \left[<br>\begin{matrix}<br>a_{1i} \ a_{2i} \ a_{3i} \ \vdots \ a_{ni}<br>\end{matrix}<br>\right]$, $\beta$为等式右边常量组成的列向量.  </p>
+<h2 id="相关定义-6"><a href="#相关定义-6" class="headerlink" title="相关定义"></a>相关定义</h2><p>齐次线性方程组<br>:    等式右边的常数为0的方程组.<br>同解方程组<br>:    <strong>解集</strong>相同的多个方程组.<br>自由未知量<br>:    用以表示其它未知量, 而自己没有确定取值且未被其他未知量表示的未知量.<br>基础解系<br>:    设$a_1, a_2 \cdots a_n$为一组解向量, 若他们线性无关且可以线性表示任意一个解向量, 则称他们为方程组的一个基础解系, 本质上是向量组的极大无关组.<br>导出组<br>:    对一个非齐次线性方程组, 另右边常数项为0得到的齐次线性方程组为那个非齐次线性方程组的导出组.  </p>
+<h2 id="相关定理-3"><a href="#相关定理-3" class="headerlink" title="相关定理"></a>相关定理</h2><h3 id="齐次线性方程组"><a href="#齐次线性方程组" class="headerlink" title="齐次线性方程组"></a>齐次线性方程组</h3><ul>
+<li>设线性方程组Ax = B, 当r(A) = r($\breve{a}$) = n时, 方程组有唯一解, 若r(A) = r($\breve{A}$) $&lt;$ n, 方程组有无穷多解, 若r(A) != r($\breve{A}$), 方程组无解.  </li>
+<li>因为解向量的线性组合也是齐次线性方程组的解, 所以含有非零解的齐次线性方程组有无穷多解.  </li>
+<li>经过初等变换的方程组的解与原方程组的解相同.由此可得出齐次线性方程组总有解, 且若方程个数小于未知量个数则必有非零解.  </li>
+<li>若r(A) $&lt;$ 未知数个数n, 则任意n-r(A)个解向量组成的的向量组是一个基础解系.  </li>
+</ul>
+<h3 id="非齐次线性方程组"><a href="#非齐次线性方程组" class="headerlink" title="非齐次线性方程组"></a>非齐次线性方程组</h3><ul>
+<li>若a, b是两个解向量, 则a-b为导出组的一个解向量.  </li>
+<li>若y是一个解向量, n是导出组的一个通解, 则y+n也是一个解向量.  </li>
+<li>任意解向量可以表示为特解y+导出组的某个解向量n.  </li>
+<li>若方程组满足r(A) = r(A, b), n是导出组的基础解系, y是一个特解, 则方程组的通解为y+n.  </li>
+</ul>
+<h2 id="高斯消元法"><a href="#高斯消元法" class="headerlink" title="高斯消元法"></a>高斯消元法</h2><p>设未知数个数为n.<br>考虑线性方程组AX = B(A, B是矩阵),则称C = (A, B)为这个方程组的增广矩阵.<br>如果B中所有元素为0, 为齐次线性方程组.<br>若将每个x的代入方程组中成立的取值按顺序组成一个列向量, 则称其为那个方程组的解向量.<br>方程组的高斯消元法本质上等价于对其增广矩阵进行初等行变换到规范的阶梯形矩阵.<br>化解增广矩阵时, 如果最下面一个常数元素无法化成0, 则原方程无解.<br>如果那个常数元素为0, 但是矩阵的秩小于未知数个数, 则方程有无数多解. 若相等, 方程有唯一解.  </p>
+<h2 id="Cramer-Theorem"><a href="#Cramer-Theorem" class="headerlink" title="Cramer Theorem"></a>Cramer Theorem</h2><p>n元线性方程组系数行列式D不为0是此方程组有唯一解的 <strong>充分不必要条件</strong>.  </p>
+<script type="math/tex; mode=display">x_j = { {D_j}\over{D} }</script><p>其中$D_j$为将D中j列换成方程组右边常数的行列式.<br>若齐次线性方程组的D不为0, 则其只有一x全为0的解. 反之, 可能有非零解.  </p>
+<hr>
+<h1 id="线性空间"><a href="#线性空间" class="headerlink" title="线性空间"></a>线性空间</h1><h2 id="相关定义-7"><a href="#相关定义-7" class="headerlink" title="相关定义"></a>相关定义</h2><p>数域<br>:    设P为一个包含0, 1的数集, 若P中数的和差积商都在P中, 则成P是一个数域.<br>维数<br>:    设V是数域P上的线性空间, 若$a_1, a_2, \cdots, a_n$是V中n个线性无关的向量, 且V中任意i向量都可以由他们表示, 则称V为n维线性空间.类似极大无关组, 注意$R^n$的线性子空间不一定是n维向量.<br>基<br>:    维数定义中$a_1, a_2, \cdots, a_n$就叫V的一组基.<br>坐标<br>:    任何数域P上的线性空间V中的任何一个元素y都可以写成$y = (a_1, a_2 \cdots a_n)\left(<br>\begin{matrix}<br>b_1 \ b_2 \ \vdots \ b_n<br>\end{matrix}<br>\right)$其中a向量组是一组基, 所以可以将线性空间中的元素称为向量, b向量组称为坐标.<br>同构<br>:    设V和K都是实线性空间, f是V到K的双射若a, 若f和同一项中的常数在运算中可以互换, 则V和K同构.<br>过渡矩阵<br>:    设$C_n$, a,b向量组是n维线性空间V的两组基, 若有b = a$\times$C, 则称C是基a到基b的过渡矩阵.<br>欧氏空间<br>:    定义了内积的实线性空间.<br>长度<br>:    设V是欧式空间, 则a$\in$V的长度为$\sqrt{(a, a)}$<br>a的单位化<br>:    通过$\frac{a}{|a|}$得到的单位向量.<br>夹角<br>:    设V是欧式空间, 对非零的a, b$\in$V, 定义a, b的夹角$&lt;$a, b$&gt;$ = arccos$\frac{\<a, b\>}{|a||b|}$<br>正交<br>:    元素a, b垂直时.<br>距离<br>:    欧式空间v中元素a, b之间的距离为|a-b|<br>正交向量组<br>:    若欧式空间v中一组非零向量$a_1, a_2 \cdots a_n$两两正交, 则称为一个正交向量组<br>正交基<br>:    两两正交的一组基.<br>标准正交基<br>:    所有向量都是单位向量的正交基.  </p>
+<h3 id="运算定义"><a href="#运算定义" class="headerlink" title="运算定义"></a>运算定义</h3><p>设p是一个数域, v是一个非空集合.<br>加法<br>:    如果对任意两个元素a, b$\in$v, 总有唯一的y$\in$v与之对应, 则称y是a与b的和.<br>数乘<br>:    如果对于任一数k$\in$p与与任意元素a$\in$v, 总有唯一元素d$\in$v与之对应, 则称d为ak的的积.<br>线性空间<br>:    满足以下8条运算律, 且对于加法和数乘封闭的空间称为线性空间.  </p>
+<ol>
+<li>a + b = b + a.  </li>
+<li>a + b + c = a + (b + c)  </li>
+<li>V中存在元素0, 使得$\forall$a$\in$V都有a + 0 = a  </li>
+<li>对任何a$\in$V, 都有a的负元素b, 使得a + b = 0  </li>
+<li>1a = a  </li>
+<li>abc = a(bc)  </li>
+<li>a(b + c) = ab + ac  </li>
+<li>(a + b)c = ac + bc<br>线性子空间<br>:    线性空间V中仍为线性空间的一个V的子集.<br>生成的线性子空间<br>:    设V为P上的线性空间, $a_1, a_2, \cdots a_n \in V$, 则L($a_1, a_2 \cdots a_n$) = {$k_1a_1 + k_2a_2 \cdots k_na_n \in V | k_i \in P|$}是V的子空间, 成为由$a_1, a_2, \cdots a_n$生成的子空间.<br>内积<br>:    $\exists a, b\in V$, 记(a, b) V是一个实线性空间, 若存在唯一实数与他们对应, 且满足  <ol>
+<li>(a, b) = (b, a)  </li>
+<li>(ka, b) = k(a, b)  </li>
+<li>(a+b, c) = (a, y) + (b, y)  </li>
+<li>(a, a) $\geq$ 0, 当且仅当a = 0时取=  </li>
+</ol>
+<ul>
+<li>在$R^n$中, 定义内积为a,b对应元素乘积的和.  </li>
+<li>在实线性空间$M^{m\times n}$中, 定义A = $(a_{ij})_{m\times n}$, $B = (b_{ij})_{m\times n}$的内积为($\sum^m_{i=1}\sum^n_{j=1}a_{ij}b_{ij}$)  </li>
+<li>C[a, b]中对任意f(x), g(x)可定义内积为$\int^b_af(x)g(x)dx$  </li>
+<li>标准正交基下元素的内积和长度计算等价于对应坐标向量的计算.  </li>
+</ul>
+</li>
+</ol>
+<h2 id="线性空间的性质"><a href="#线性空间的性质" class="headerlink" title="线性空间的性质"></a>线性空间的性质</h2><ul>
+<li>负元素和零元素唯一</li>
+<li>0a = 0</li>
+<li>a0 = 0</li>
+<li>-1a = -a</li>
+</ul>
+<h2 id="相关定理-4"><a href="#相关定理-4" class="headerlink" title="相关定理"></a>相关定理</h2><ul>
+<li>线性空间V的子集L是线性子空间的充要条件是L对V中的线性运算封闭.  </li>
+<li>V与K同构, f是V到K的双射, 则V中向量组$a_1, a_2 \cdots a_n$线性相关的充要条件的是f($a_1$), f($a_2$) $\cdots$ f($a_n$)线性相关, 否命题也成立.  </li>
+<li>同构的实线性空间有相同的维数.  </li>
+<li>任何一个实n维线性空间与$R^n$是同构的.  </li>
+<li>因为同构映射保持了向量之间线性关系的相同, 所以讨论V中元素关系就可以讨论坐标向量的线性关系来进行.  </li>
+<li>设C是基a到基b的过渡矩阵, 则C的第j列就是$b_j$在a下的坐标.  </li>
+<li>设C是基a到基b的过渡矩阵, 则C的列向量组线性无关, C是满秩.  </li>
+<li>设C是基a到基b的过渡矩阵, 若元素k在a下的坐标为向量组$a_1$, 在b下的坐标为$a_2$, 则$a_2 = C^{-1}a_1$.  </li>
+<li>设a, b是欧式空间V内的元素, k是任意实数, 则:<ul>
+<li>|a| $\geq$ 0, 当且仅当a=0是取等号.  </li>
+<li>|ka| = k|a|  </li>
+<li>|(a, b)| $\leq$ |a||b|, 当且仅当a, b线性相关时成立  </li>
+</ul>
+</li>
+</ul>
+<h2 id="常见的线性空间"><a href="#常见的线性空间" class="headerlink" title="常见的线性空间"></a>常见的线性空间</h2><ul>
+<li>全体n维向量.  </li>
+<li>全体m$\times$n矩阵.  </li>
+<li>次数小于n的全体多项式(记为$R[x]_{&lt;n}$)</li>
+<li>正弦函数的集合.  </li>
+<li>齐次线性方程组的全体解向量.  </li>
+<li>[a, b]上的全体实连续函数.  </li>
+</ul>
+<h2 id="Gram-Schmidt正交化法"><a href="#Gram-Schmidt正交化法" class="headerlink" title="Gram-Schmidt正交化法"></a>Gram-Schmidt正交化法</h2><p>设$a_1, a_2, \cdots a_n$是欧式空间B的一组基.<br>令$b_1 = a_1$<br>按照$b_i = \sum^n_{i=2}{\frac{(b_{i-1}, a_i)b_{i-1} }{b_{i-1}, b_{i-1} }}$<br>单位化$c_i = \frac{b_i}{|b_i|}$<br>得到与a向量组等价的正交基c. , 且两边对应的部分也等价.  </p>
+<hr>
+<h1 id="矩阵的对角化"><a href="#矩阵的对角化" class="headerlink" title="矩阵的对角化"></a>矩阵的对角化</h1><h2 id="相关定义-8"><a href="#相关定义-8" class="headerlink" title="相关定义"></a>相关定义</h2><p>特征值<br>:    设A是数域P上的n阶方阵, 若存在数k$\in$P和P上的n阶非零列向量a使得Aa = ka, 则称k是A的特征值, a是A对应k的特征向量.<br>特征子空间($V_k$)<br>:    设A是数域P上的n阶方阵, k是A的特征值, 则{A对应于k的所有特征向量}$\cup${0}是(kE-A)X = 0的解空间, 称为A对应于k的特征子空间.<br>特征多项式<br>:    设A是数域P上的n阶方阵, k是A的特征值, 则f(k) = |kE - A|为A的特征多项式.<br>特征方程<br>:    将特征多项式取值为0得到的关于k的方程.<br>迹<br>:    设n阶方阵A$=(a_{ij})_n$, 则$\sum^n_{i=1}{a_{a_{ii} }}$成为A的迹, 记作tr(A)<br>代数重数<br>:    若对于方阵A, k为n重特征值, 则n为k的代数重数.<br>几何重数<br>:    设k为A的特征值, r为$V_k$的维数, 则称r为k的几何重数.<br>相似矩阵<br>:    设A, B为n阶方阵, 若$\exists$P, 使得$P^{-1}AP = B$, 则称A, B相似.<br>正交矩阵<br>:    若$AA^T = E$, 则其为正交矩阵.  </p>
+<h2 id="相关定理-5"><a href="#相关定理-5" class="headerlink" title="相关定理"></a>相关定理</h2><ul>
+<li>n阶方阵A的特征值即(kE - A)X = 0有非零解的k值.  </li>
+<li>设k是方阵A的一个特征值, $a_1, a_2 \cdots a_s$是对应k的特征向量, 任取$k_1, k_2 \cdots k_s$,, 若$\sum_{i=1}{s}{k_ia_i} \neq 0$, 则其也是对应于k的特征向量.  </li>
+<li>一个特征向量对应唯一特征值, 但一个特征值可以对应多个特征向量.  </li>
+<li>n阶方阵A有n个特征值(可以相等), 且有<ul>
+<li>$\sum^n_{i=1}{k_i} = \sum^n_{i=1}a_{ii} = tr(A)$  </li>
+<li>$\prod^n_{i=1}{k_i} = |A|$  </li>
+</ul>
+</li>
+<li>对应与不同特征值的特征向量之间线性无关.  <ul>
+<li>设$k_1, k_2 \cdots k_n$是方阵A的n个互异特征值, 则$a_{i1}, a_{i2} \cdots a_{ir_i}$是对应于$k_i$的特征向量, 则$a_{11}, a_{12} \cdots a_{1r_1} \cdots a_{21}, a_{22} \cdots a_{2r_2} \cdots a_{nr_n}$线性无关.  </li>
+</ul>
+</li>
+<li>$A^T$的特征多项式与$A$的特征多项式相同.  </li>
+<li>设k为A的特征值, a为A对应于k的特征向量, 则有$qk$为kA对应于a的特征值, $k^q$为$A^q$对应于a的特征值, g(A) = $a_0A^q + a_1A^{q-1} + \cdots a_qE$, 则g(k)为g(A)对应于a的特征值, q$\in$C, $a_i\in$C.  </li>
+<li>$k^{-1}$为$A^{-1}$的特征值, 特征向量不变.  </li>
+<li>$\frac{|A|}{k}为A^*$的特征值, 特征向量不变.  </li>
+<li>如果方阵的一个特征值k为n重特征值, 则$V_k$的维数$\leq$n.  </li>
+<li>一个n阶方阵的代数重数和为n.  </li>
+<li>相似矩阵具有自反性, 对称性, 传递性.  </li>
+<li>若A~B, 则|kE - A| = |kE - B|.  <ul>
+<li>kA ~ kB  </li>
+<li>$A^m$ ~ $B^m$  </li>
+<li>g(A) ~ g(B), g的定义见上.  </li>
+</ul>
+</li>
+<li>存在对角矩阵B, 使n阶方阵A与B相似的充要条件是A有n个线性无关的特征向量, 且这个存在的B的主对角元为A的每个特征值.  </li>
+<li>n阶方阵A相似对角矩阵的充要条件是A的每个特征值的代数重数等于几何重数.  </li>
+<li>A是正交矩阵的充要条件是A的列向量是两两正交的单位向量组.  </li>
+<li>若A是正交矩阵, 则$A^{-1} = A^T$  </li>
+<li>若A, B是正交矩阵, Ab也是正交矩阵.  </li>
+<li>正交矩阵的实特征值只能为1或-1.  </li>
+<li>对称矩阵的特征值与特征相量为实数.  </li>
+<li>对对称矩阵A, 若k $\neq$ h, 特征值k对应的向量a与特征值h对应的向量b正交.  </li>
+<li>实对称矩阵每个特征值的代数重数等于几何重数.  <ul>
+<li>设A为实对称矩阵, 则必定存在正交矩阵Q使得$Q^{-1}$AQ为对角矩阵.  </li>
+</ul>
+</li>
+</ul>
+<h2 id="求特征值与特征向量"><a href="#求特征值与特征向量" class="headerlink" title="求特征值与特征向量"></a>求特征值与特征向量</h2><p>特征值: 求出特征方程的所有解$k_1, k_2 \cdots k_n$.<br>特征向量: 对于特征值$k_i$, 求出$( k_iE - A )X = 0$的基础解系, 则那个基础解系就是$k_i$对应的特征向量.  </p>
+<h2 id="判断并求出n阶方阵A相似的对角矩阵"><a href="#判断并求出n阶方阵A相似的对角矩阵" class="headerlink" title="判断并求出n阶方阵A相似的对角矩阵"></a>判断并求出n阶方阵A相似的对角矩阵</h2><p>(1): 求出A的所有特征值, 设A有s个不同的特征值k, n为对应的代数重数.<br>(2): 对每一个特征值$k_i$, 验证r($k_iE - A$) = n - $n_i$, 若任何一个为否, 则A无相似的对角矩阵.<br>(3): 对$k_i$, 求$V_{k_i}$的基, 把这些基作为列向量构造P, 则按照列向量与特征值一一对应的顺序排成的diag(k)即为所求.  </p>
+<h2 id="实对称矩阵A的对角化"><a href="#实对称矩阵A的对角化" class="headerlink" title="实对称矩阵A的对角化"></a>实对称矩阵A的对角化</h2><p>(1): 求出A的特征值.<br>(2): 将每个特征值对应的特征向量正交单位化.<br>(3): 将它们组合起来组成Q.<br>(4): 将特征值按照Q中特征向量对应的顺序写成对角矩阵.  </p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://scefuvh.github.io/linear_mathematics/" data-id="ckn1nf6b9000x3oepgc982s79" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Math/" rel="tag">Math</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Notes/" rel="tag">Notes</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/remote-github-management/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Remote Github Management
+        
+      </div>
+    </a>
+  
+  
+    <a href="/electromagnetism/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Electronmagnetism</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Android/" rel="tag">Android</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Black-Apple/" rel="tag">Black Apple</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hardware/" rel="tag">Hardware</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/" rel="tag">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux-Android/" rel="tag">Linux Android</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux-Music/" rel="tag">Linux Music</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Math/" rel="tag">Math</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Note/" rel="tag">Note</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Notes/" rel="tag">Notes</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Physics/" rel="tag">Physics</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/System/" rel="tag">System</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Systemd/" rel="tag">Systemd</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Test/" rel="tag">Test</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/npm/" rel="tag">npm</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Android/" style="font-size: 10px;">Android</a> <a href="/tags/Black-Apple/" style="font-size: 10px;">Black Apple</a> <a href="/tags/Git/" style="font-size: 10px;">Git</a> <a href="/tags/Hardware/" style="font-size: 10px;">Hardware</a> <a href="/tags/Linux/" style="font-size: 17.5px;">Linux</a> <a href="/tags/Linux-Android/" style="font-size: 10px;">Linux Android</a> <a href="/tags/Linux-Music/" style="font-size: 10px;">Linux Music</a> <a href="/tags/Math/" style="font-size: 12.5px;">Math</a> <a href="/tags/Note/" style="font-size: 10px;">Note</a> <a href="/tags/Notes/" style="font-size: 20px;">Notes</a> <a href="/tags/Physics/" style="font-size: 12.5px;">Physics</a> <a href="/tags/System/" style="font-size: 15px;">System</a> <a href="/tags/Systemd/" style="font-size: 10px;">Systemd</a> <a href="/tags/Test/" style="font-size: 10px;">Test</a> <a href="/tags/npm/" style="font-size: 10px;">npm</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/04/">April 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/02/">February 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">December 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">September 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">July 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/npm%E4%BD%BF%E7%94%A8/">Npm使用</a>
+          </li>
+        
+          <li>
+            <a href="/%E6%92%B0%E5%86%99Systemd%E6%96%87%E4%BB%B6/">撰写Systemd单元服务</a>
+          </li>
+        
+          <li>
+            <a href="/Xiaoxin-Pad-Flashing/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/EarPhone-Failure/">Ear Phone Can Not Be Recognized.</a>
+          </li>
+        
+          <li>
+            <a href="/zinit-installation/">Zinit_installation</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2021 David Hu<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
