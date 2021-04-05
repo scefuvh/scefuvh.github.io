@@ -5,20 +5,20 @@
   
 
   
-  <title>David&#39;s Sweet Hut</title>
+  <title>David&#39;s Sweet Home</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="The blog of David Hu&#39;s">
+  <meta name="description" content="This is Daivd Hu&#39;s blog.">
 <meta property="og:type" content="website">
-<meta property="og:title" content="David&#39;s Sweet Hut">
+<meta property="og:title" content="David&#39;s Sweet Home">
 <meta property="og:url" content="https://scefuvh.github.io/page/2/">
-<meta property="og:site_name" content="David&#39;s Sweet Hut">
-<meta property="og:description" content="The blog of David Hu&#39;s">
+<meta property="og:site_name" content="David&#39;s Sweet Home">
+<meta property="og:description" content="This is Daivd Hu&#39;s blog.">
 <meta property="og:locale" content="en_US">
 <meta property="article:author" content="David Hu">
 <meta property="article:tag" content="Notes, Reviews, Essays">
 <meta name="twitter:card" content="summary">
   
-    <link rel="alternate" href="/atom.xml" title="David&#39;s Sweet Hut" type="application/atom+xml">
+    <link rel="alternate" href="/atom.xml" title="David&#39;s Sweet Home" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
@@ -39,7 +39,7 @@
   <div id="header-outer" class="outer">
     <div id="header-title" class="inner">
       <h1 id="logo-wrap">
-        <a href="/" id="logo">David&#39;s Sweet Hut</a>
+        <a href="/" id="logo">David&#39;s Sweet Home</a>
       </h1>
       
     </div>
@@ -89,27 +89,16 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <span id="more"></span>
-<p>Pintos is a small project to finish for system study. But it is very difficult for one linuxer to install it to their machine since it is way too old. The passage is mainly about installing pintos on archlinux with qemu.</p>
-<h1 id="Get-Pintos"><a href="#Get-Pintos" class="headerlink" title="Get Pintos"></a>Get Pintos</h1><p><code>git clone git://pintos-os.org/pintos-anon</code></p>
-<h1 id="Install-utility"><a href="#Install-utility" class="headerlink" title="Install utility"></a>Install utility</h1><ol>
-<li>Since <em>stropts.h</em> no longer exists on modern linux, we must change dir to <code>$ROOTDIR/src/utils</code> and comment out <code>#include&lt;stropts.h&gt;</code> in <em>squish-pty.c</em> and <em>squish-unix.c</em> and lines 288-293 in <em>squish-pty.c</em></li>
-<li>run <code>make</code></li>
-</ol>
-<h1 id="Compile-Pintos"><a href="#Compile-Pintos" class="headerlink" title="Compile Pintos"></a>Compile Pintos</h1><ol>
-<li>Open <em>pintos-gdb</em> and change <em>GDBMACROS</em> to the absolute of your <em>gdb-macros</em>.</li>
-<li>Compile the threads.</li>
-<li>Edit <em>Make.vars</em>. Change the last line to ‘SIMULATOR = —qemu’</li>
-<li>Compile the kernel</li>
-<li>On line 103 of <em>pintos</em> file, change “bochs” to “qemu”. On line number 257 change “kernel.bin” to the relative path so that kernels of all projects can be run.</li>
-<li>On line 362 of <em>pintos.pm</em> file, change <em>loader.bin</em> to the absolute path of it.</li>
-<li>Happy experimenting!</li>
-</ol>
-
+        <p>Pintos is a small project to finish for system study. But it is very difficult for one linuxer to install it to their machine since it is way too old. The passage is mainly about installing pintos on archlinux with qemu.</p>
+        
+          <p class="article-more-link">
+            <a href="/install_pintos_on_archlinux/#more">Read More</a>
+          </p>
+        
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://scefuvh.github.io/install_pintos_on_archlinux/" data-id="ckn4cei12000whhephuktg5ux" class="article-share-link">Share</a>
+      <a data-url="https://scefuvh.github.io/install_pintos_on_archlinux/" data-id="ckn4lwtss000v2zep7eqx3wbx" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/" rel="tag">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/System/" rel="tag">System</a></li></ul>
@@ -148,7 +137,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://scefuvh.github.io/Backlight-Adjustment/" data-id="ckn4cei0i0003hhep36yacmui" class="article-share-link">Share</a>
+      <a data-url="https://scefuvh.github.io/Backlight-Adjustment/" data-id="ckn4lwts600012zephu8if8as" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/" rel="tag">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Notes/" rel="tag">Notes</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/System/" rel="tag">System</a></li></ul>
@@ -188,7 +177,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://scefuvh.github.io/Polkit-Failure-After-Restoring/" data-id="ckn4cei0t000ihhep1nohf288" class="article-share-link">Share</a>
+      <a data-url="https://scefuvh.github.io/Polkit-Failure-After-Restoring/" data-id="ckn4lwtsj000g2zepe1v11ssj" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/" rel="tag">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Notes/" rel="tag">Notes</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/System/" rel="tag">System</a></li></ul>
@@ -222,31 +211,16 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <span id="more"></span>
-<ol>
-<li>Download the latest version</li>
-<li>Install it.</li>
-<li>Start the service and log in on <a target="_blank" rel="noopener" href="https://localhost:8834">https://localhost:8834</a>.</li>
-<li>Choose <em>Managed Scanner</em> and continue.</li>
-<li>Choose <em>Tenable.sc</em> and continue.</li>
-<li>Set your username and password.</li>
-<li>After entering to the main page, close it.</li>
-<li>Stop the service.</li>
-<li>Execute <code>/opt/nessus/sbin/nessuscli fetch --challenge</code> to get the challenge code.</li>
-<li>Go to <a target="_blank" rel="noopener" href="http://www.tenable.com/products/nessus-home">http://www.tenable.com/products/nessus-home</a> for an active code.</li>
-<li>Go to <a target="_blank" rel="noopener" href="https://plugins.nessus.org/offline.php">https://plugins.nessus.org/offline.php</a> to download the latest update package.</li>
-<li>Execute <code>/opt/nessus/sbin/nessuscli update 升级包文件名</code>.</li>
-<li>Execute <code>find / -name &#39;plugin_feed_info.inc -print</code></li>
-<li>For all found files, add or change the variables like<br><code>PLUGIN_FEED = &quot;ProfessionalFeed (Direct)&quot;;</code><br><code>PLUGIN_FEED_TRANSPORT = &quot;Tenable Network Security Lightning&quot;;</code></li>
-<li>Execute<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">export PLUGIN_SET=<span class="string">&quot;201912022000&quot;</span></span><br><span class="line">cat&gt;<span class="regexp">/opt/</span>nessus<span class="regexp">/lib/</span>nessus<span class="regexp">/plugins/</span>plugin_feed_info.inc&lt;&lt;EOF</span><br><span class="line">PLUGIN_SET = <span class="variable">$&#123;PLUGIN_SET&#125;</span>;</span><br><span class="line">PLUGIN_FEED = <span class="string">&quot;ProfessionalFeed (Direct)&quot;</span>;</span><br><span class="line">PLUGIN_FEED_TRANSPORT = <span class="string">&quot;Tenable Network Security Lightning&quot;</span>;</span><br><span class="line">EOF</span><br><span class="line">cat&gt;<span class="regexp">/opt/</span>nessus<span class="regexp">/var/</span>nessus/plugin_feed_info.inc&lt;&lt;EOF</span><br><span class="line">PLUGIN_SET = <span class="variable">$&#123;PLUGIN_SET&#125;</span>;</span><br><span class="line">PLUGIN_FEED = <span class="string">&quot;ProfessionalFeed (Direct)&quot;</span>;</span><br><span class="line">PLUGIN_FEED_TRANSPORT = <span class="string">&quot;Tenable Network Security Lightning&quot;</span>;</span><br><span class="line">EOF</span><br></pre></td></tr></table></figure></li>
-<li>Restart the service.</li>
-<li>Enjoy scanning.</li>
-</ol>
-
+        <p>Nessus is good for auto-scanning vulnerability. But there is great limiation for<br>free users. This passage is about cracking it without paying a single dollar.</p>
+        
+          <p class="article-more-link">
+            <a href="/Nessus-Crack/#more">Read More</a>
+          </p>
+        
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://scefuvh.github.io/Nessus-Crack/" data-id="ckn4cei0p000chhep82ds7kan" class="article-share-link">Share</a>
+      <a data-url="https://scefuvh.github.io/Nessus-Crack/" data-id="ckn4lwtsf000a2zep0i840fdf" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Notes/" rel="tag">Notes</a></li></ul>
@@ -289,7 +263,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://scefuvh.github.io/Meizu-Note6-Flashing/" data-id="ckn4cei0o000ahhep8ucmhit7" class="article-share-link">Share</a>
+      <a data-url="https://scefuvh.github.io/Meizu-Note6-Flashing/" data-id="ckn4lwtsd00082zep65de4nwo" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/" rel="tag">Android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Notes/" rel="tag">Notes</a></li></ul>
@@ -332,7 +306,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://scefuvh.github.io/math/" data-id="ckn4cei180014hhep6n5x1dpa" class="article-share-link">Share</a>
+      <a data-url="https://scefuvh.github.io/math/" data-id="ckn4lwtsv00102zep1cjr4q84" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Math/" rel="tag">Math</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Notes/" rel="tag">Notes</a></li></ul>
@@ -375,7 +349,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://scefuvh.github.io/storage-optimization/" data-id="ckn4cei1b001dhhep0trt6mav" class="article-share-link">Share</a>
+      <a data-url="https://scefuvh.github.io/storage-optimization/" data-id="ckn4lwtt0001c2zep0zdc1gdp" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hardware/" rel="tag">Hardware</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/" rel="tag">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Notes/" rel="tag">Notes</a></li></ul>
@@ -418,7 +392,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://scefuvh.github.io/remote-github-management/" data-id="ckn4cei1a0019hhep17ht49tm" class="article-share-link">Share</a>
+      <a data-url="https://scefuvh.github.io/remote-github-management/" data-id="ckn4lwtsy00182zep77p79n56" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/" rel="tag">Git</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Notes/" rel="tag">Notes</a></li></ul>
@@ -461,7 +435,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://scefuvh.github.io/linear_mathematics/" data-id="ckn4cei14000zhhep4723745r" class="article-share-link">Share</a>
+      <a data-url="https://scefuvh.github.io/linear_mathematics/" data-id="ckn4lwtsu000y2zep4rme5hd4" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Math/" rel="tag">Math</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Notes/" rel="tag">Notes</a></li></ul>
@@ -504,7 +478,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://scefuvh.github.io/electromagnetism/" data-id="ckn4cei10000rhhep47dca9xj" class="article-share-link">Share</a>
+      <a data-url="https://scefuvh.github.io/electromagnetism/" data-id="ckn4lwtsq000q2zephyjr0upq" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Notes/" rel="tag">Notes</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Physics/" rel="tag">Physics</a></li></ul>
